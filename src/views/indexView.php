@@ -5,7 +5,9 @@
         <title>Amazon Smile Homepage</title>
     </head>
     <body>
+        <nav>
 
+        </nav>
         <h1>Amazon</h1>
         <h2>Test</h2>
 
