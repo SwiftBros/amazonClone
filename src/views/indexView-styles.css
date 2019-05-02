@@ -1,0 +1,26 @@
+.home-cards {
+    height: 400px;
+}
+
+.card {
+    border: 1px solid gray;
+    padding-top: 10px;
+}
+
+.profile {
+    width:80px;
+}
+
+.card-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.card-text {
+    font-size:12px;
+}
+
+.daily-price {
+    font-weight: bold;
+    font-size: 16px;
+}
