@@ -5,13 +5,35 @@ Created by Matt and Rageeb
 Full-stack web that mimics Amazon's website.
 
 ## Features
-- [] User can search for products
-- [] User can filter products by categories
-- [] User can choose a charity to donate to
-- [] User can login
-- [] User can sort items by price/reviews
-- [] User can add products to database dynamically
-- [] User can confirm a purchase using PayPal/Credit Cards
+- [ ] User can **search** for products
+- [ ] User can **filter** products by categories
+    - Review/Rating
+    - Prime/Not Prime
+    - Condition
+- [ ] User can **choose a charity** to donate to
+- [ ] User can **login**
+- [ ] User can **sort** items by price/reviews
+    - Price: Low to High
+    - Price: High to Low
+    - Avg customer review (High to Low)
+- [ ] User can **add products** to database dynamically
+- [ ] User can **confirm a purchase** using PayPal/Credit Cards
+
+## Pages
+- [ ] Login Page
+- [ ] Home Page
+    - Charity Page hover-over
+- [ ] Charity Page
+- [ ] Search Page
+    - 3 searches
+    - 15 products per search
+    - 3 * 15 = 45 images
+- [ ] Product Detail Page
+- [ ] Cart Page
+- [ ] Checkout Page
+
+## GIF Recording Demo
+*IMGUR Placeholder*
 
 ## License
 © 2019 Rageeb and Matthew
