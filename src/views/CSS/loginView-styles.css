@@ -1,0 +1,29 @@
+.aligncenter {
+    text-align: center;
+}
+
+.logo {
+    height: 40px;
+}
+
+.login-row {
+    height: 600px;
+}
+
+.login-box {
+    border: 1px solid gray;
+}
+
+.login-text {
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+.shop {
+    font-size: 27px;
+}
+
+.gives {
+    font-size: 27px;
+    font-weight: bold;
+}
