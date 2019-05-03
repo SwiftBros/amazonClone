@@ -4,6 +4,7 @@
 
 .logo {
     height: 40px;
+    margin-top: 20px;
 }
 
 .login-row {
@@ -25,5 +26,10 @@
 
 .gives {
     font-size: 27px;
+    font-weight: bold;
+}
+
+.login-form {
+    font-size: 12px;
     font-weight: bold;
 }

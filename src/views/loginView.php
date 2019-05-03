@@ -37,6 +37,16 @@
                         <br />
                         <div>Support your charitable organization by starting your shopping at smile.amazon.com</div>
                     </div>
+
+                    <div class="login-form">
+                        <form>
+                            <br />
+                            Email (phone for mobile accounts)<br />
+                            <input type="email" name="email" style="width: 100%;" /><br /><br />
+                            Password<br />
+                            <input type="password" name="password" style="width: 100%;" />
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
