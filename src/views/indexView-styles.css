@@ -11,7 +11,7 @@
 }
 
 .card {
-    /* border: 1px solid gray; */
+    border: 10px solid red;
     padding-top: 10px;
 }
 
