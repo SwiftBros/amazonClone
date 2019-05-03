@@ -1,17 +1,17 @@
 .carousel-slideshow {
-    padding: 1.5rem;
     margin-right: 0;
     margin-left: 0;
-    border-width: .2rem;
+    /* padding: 1.5rem; */
+    /* border-width: .2rem; */
 }
 
 .home-cards {
     height: 400px;
-    margin: 0px 10px 0px 10px;
+    margin: 1px 10px 0px 10px;
 }
 
 .card {
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     padding-top: 10px;
 }
 

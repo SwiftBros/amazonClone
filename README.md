@@ -21,8 +21,8 @@ Full-stack web that mimics Amazon's website.
 
 ## Pages
 - [ ] Login Page
-- [ ] Home Page
-    - Charity Page hover-over
+- [x] Home Page
+    - [ ] Charity Page hover-over (Header)
 - [ ] Charity Page
 - [ ] Search Page
     - 3 searches
@@ -36,7 +36,7 @@ Full-stack web that mimics Amazon's website.
 *IMGUR Placeholder*
 
 ## License
-© 2019 Rageeb and Matthew
+© 2019 Matt and Rageeb
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
