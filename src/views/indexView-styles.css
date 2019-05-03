@@ -1,5 +1,13 @@
+.carousel-slideshow {
+    padding: 1.5rem;
+    margin-right: 0;
+    margin-left: 0;
+    border-width: .2rem;
+}
+
 .home-cards {
     height: 400px;
+    margin: 0px 10px 0px 10px;
 }
 
 .card {
@@ -8,7 +16,7 @@
 }
 
 .profile {
-    width:80px;
+    width: 80px;
 }
 
 .card-title {
@@ -17,7 +25,13 @@
 }
 
 .card-text {
-    font-size:12px;
+    font-size: 12px;
+}
+
+.recommendations {
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 .daily-price {

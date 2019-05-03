@@ -15,12 +15,40 @@
     </head>
 
     <body>
-        <div class="container">
-            <div class="row justify-content-around home-cards">
+        <!-- Carousel slider -->
+        <!-- <div class="carousel-slideshow">
+            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="d-block w-100 fluid" src="images/tyrion-fake.jpg" alt="First slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 fluid" src="images/placeholder.png" alt="Second slide">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="d-block w-100 fluid" src="images/headphones-01.jpeg" alt="Third slide">
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div> -->
+
+
+        <!-- Container for 4 cards -->
+        <div class="container-fluid">
+            <div class="row home-cards">
                 <div class="col-md-3 col-sm-3 col-xs-12 card">
                     <div class="row">
                         <div class="col-4">
-                            <img src="images/profile.png" alt="profile_pic" class="img-fluid profile"/>
+                            <img src="images/profile.png" alt="profile_pic" class="img-fluid profile" />
                         </div>
                         <div class="col-8 pl-0">
                             <span class="card-title">Hi, Matthew</span>
@@ -28,6 +56,9 @@
                             <div class="card-text">generated: $0.00</div>
                         </div>
                     </div>
+
+                    <div class="recommendations">Recommendations for you</div>
+                    <img src="images/placeholder.png" alt="recommendations" class="img-fluid" />
                 </div>
 
                 <div class="col-md-3 col-sm-3 col-xs-12 card">
@@ -40,7 +71,7 @@
 
                 <div class="col-md-3 col-sm-3 col-xs-12 card">
                     <label class="card-title">Prime member deals</label>
-                    <img src="images/member-deals.jpg" alt="Prime member deals image" class="img-fluid" />
+                    <img src="images/prime-deals.jpg" alt="Prime member deals image" class="img-fluid" />
                     <div class="card-text">Deals and products just for Prime members</div>
 
                     <div class="card-text" style="padding-top: 20px; color:#0645AD">Learn more</div>
