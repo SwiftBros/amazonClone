@@ -1,18 +1,82 @@
 #navbar1 {
     background-color:#222F3D;
-    height:60px;
     color: white;
 }
 
 #navbar2 {
     background-color:#222F3D;
+    height: 20px;
+}
+
+#navbar3 {
+    background-color:#222F3D;
     color: white;
 }
 
+input[type="text"] {
+    width: 700px;
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 150px;
+    padding-right: 50px;
+}
+
+div#submitForm input {
+  background-image: url("searchLogo.png") no-repeat scroll 0 0 transparent;
+  color: #000000;
+  cursor: pointer;
+  font-weight: bold;
+  height: 30px;
+  width: 50px;
+  margin-left: -160px;
+}
+
+/* input[type="submit"] {
+    margin-left: -150px;
+    height: 30px;
+    width: 50px;
+    background-image: url("images/searchLogo.png");
+} */
+
+#supporting {
+    margin-left: 300px;
+}
+
+@media (max-width: 575.98px) {
+    #supporting {
+        margin-left: 10px;
+    }
+}
+
+#orange {
+    color: orange;
+    display: inline;
+}
+#searchBar {
+    height: 30px;
+    width: 700px;
+    border-radius: 5px;
+    margin-left: 150px;
+}
+#backToSchool{
+  height:50px;
+  float:right;
+  margin-right:20px
+}
+
+#logo{
+  height:50px;
+  width:200px;
+  position:absolute;
+  top:10px;
+  margin-left: -30px;
+}
 a {
     font-size: 10px;
+    color: white;
 }
 a:hover {
   /* background-color: yellow; */
   border: 1px solid gray;
+  color: white;
 }

@@ -33,7 +33,7 @@
       <div id='bottomHalf'>
         <div id='department'>Deliver to <br> Dewan Hasan</div>
         <div class="dropdown">
-            <button class="dropbtn2">Supporting: American Red Cross</button>
+            <button class="dropbtn2"><p id="orange">Supporting: </p>American Red Cross</button>
             <div class="dropdown-content">
               <a href="#">Link 1</a>
               <a href="#">Link 2</a>
