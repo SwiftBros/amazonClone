@@ -4,7 +4,8 @@
         <meta charset="utf-8">
         <title>Smile.amazon.com</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="header.css">
+        <link rel="stylesheet" href="CSS/header.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     </head>
     <body>
         <!-- Image and text -->
@@ -14,7 +15,8 @@
             </ul>
             <input type="text"/>
             <div id="submitForm">
-                <input type="submit" value="Search" name="submit">
+                <button type="submit" class="icon button"><i class="fa fa-search"></i></button>
+                <!-- <input type="submit" value="Search" name="submit"> -->
             </div>
             <img id='backToSchool' src="http://blog.neurogistics.com/wp-content/uploads/2014/08/Back-To-School-Special-Banner.jpg" alt="" />
         </nav>

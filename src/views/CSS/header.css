@@ -36,6 +36,12 @@ div#submitForm input {
     color: white;
 }
 
+.button {
+    margin-left: -140px;
+    background-color: orange;
+    height: 29px;
+}
+
 /* input[type="submit"] {
     margin-left: -150px;
     height: 30px;
@@ -54,6 +60,9 @@ div#submitForm input {
 @media (max-width: 575.98px) {
     #supporting {
         margin-left: 10px;
+    }
+    #firstli {
+        margin-left: 0px;
     }
 }
 
