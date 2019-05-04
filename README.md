@@ -26,7 +26,7 @@ Full-stack web that mimics Amazon's website.
 - [x] Home Page
     - [ ] Charity Page hover-over (Header)
 - [ ] Charity Page
-- [ ] Search Page
+- [x] Search Page
     - 3 searches
     - 15 products per search
     - 3 * 15 = 45 images
