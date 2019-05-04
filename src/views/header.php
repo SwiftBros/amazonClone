@@ -24,22 +24,40 @@
         <input id="searchBar" type="text"/>
         <img id='backToSchool' src="http://blog.neurogistics.com/wp-content/uploads/2014/08/Back-To-School-Special-Banner.jpg" alt="" />
 
-      </div>
 
+      </div>
+      <!-- <div id='mid'> -->
+
+      <!-- </div> -->
 
       <div id='bottomHalf'>
-        <div id='department'>Departments</div>
-        <div id='sections'>
+        <div id='department'>Deliver to <br> Dewan Hasan</div>
+        <div class="dropdown">
+            <button class="dropbtn2">Supporting: American Red Cross</button>
+            <div class="dropdown-content">
+              <a href="#">Link 1</a>
+              <a href="#">Link 2</a>
+              <a href="#">Link 3</a>
+            </div>
+        </div>
+        <!-- <div id='sections'> -->
           <div class="section">Your Amazon.com</div>
           <div class="section">Today's Deals</div>
           <div class="section">Gift Cards & Registry</div>
           <div class="section">Sell</div>
           <div class="section">Help</div>
-        </div>
+        <!-- </div> -->
         <div id='accountStuff'>
-          <div class="section">Your Account</div>
-          <div class="section">Try Prime</div>
-          <div class="section">Lists</div>
+            <div class="dropdown">
+                <button class="dropbtn">Account and Lists</button>
+                <div class="dropdown-content">
+                  <a href="#">Link 1</a>
+                  <a href="#">Link 2</a>
+                  <a href="#">Link 3</a>
+                </div>
+            </div>
+          <div class="section">Orders</div>
+          <div class="section">Prime</div>
           <div class="section">Cart</div>
         </div>
       </div>
