@@ -43,7 +43,7 @@
             <div class="row search-items">
                 <div class="col-3 left-sidebar">
                     <span class="sidebar-category">Amazon Prime</span><br />
-                    <input type="checkbox" name="prime" value="false"><img src="images/prime.png" class="prime"/>
+                    <input type="checkbox" name="prime" value="false"><img src="images/prime.png" class="prime" style="width:20%"/>
                     <br /><br />
 
                     <span class="sidebar-category">Delivery Day</span><br />
@@ -71,10 +71,15 @@
                         </div>
 
                         <div class="col-9">
-                            <span id="item-desc">On Ear Headphones with Mic, Vogek Lightweight Portable Fold-Flat Stereo Bass Headphones with 1.5M Tangle Free Cord and Microphone-Black</span><br />
+                            <span class="item-desc">On Ear Headphones with Mic, Vogek Lightweight Portable Fold-Flat Stereo Bass Headphones with 1.5M Tangle Free Cord and Microphone-Black</span><br />
                             <img src="images/4-stars.png" />
-                            <span id="review-num">248</span><br /><br />
-                            <sup class="superscript">$</sup><span id="price">12</span><sup class="superscript">99</sup>
+                            <span class="review-num">248</span><br /><br />
+                            <sup class="superscript">$</sup><span class="price">12</span><sup class="superscript">99</sup><br />
+
+                            <!-- Add this if item is prime -->
+                            <!-- TODO: Add JS/jQuery functionality for dates (+2 days from current_date)-->
+                            <img src="images/prime.png" class="prime" />
+                            <span class="prime-get-by">Get it as soon as <strong>Mon, May 6</strong></span>
                         </div>
                     </div>
                     <!-- End: Recycle up to this point -->
