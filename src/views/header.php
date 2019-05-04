@@ -9,9 +9,25 @@
     <body>
         <!-- Image and text -->
         <nav id="navbar1" class="navbar">
-
+            <ul class="navbar-nav">
+                <li><img id='logo' alt="AmazonLogo" src="images/amaz.png" /></li>
+            </ul>
+            <input type="text"/>
+            <div id="submitForm">
+                <input type="submit" value="Search" name="submit">
+            </div>
+            <img id='backToSchool' src="http://blog.neurogistics.com/wp-content/uploads/2014/08/Back-To-School-Special-Banner.jpg" alt="" />
         </nav>
-        <nav id="navbar2" class="navbar navbar-expand-sm bg-light">
+        <nav id="navbar2" class="navbar navbar-expand-sm">
+            <ul class="navbar-nav">
+                <li>
+                    <!-- <div id="supporting"> -->
+                    <a id="supporting" class="nav-link" href="#"><p id="orange">Supporting: </p> American Red Cross</a>
+                    <!-- </div> -->
+                </li>
+            </ul>
+        </nav>
+        <nav id="navbar3" class="navbar navbar-expand-sm">
           <ul class="navbar-nav">
             <li class="nav-item">
               <a class="nav-link" href="#">Deliver to Dewan</a>
@@ -29,12 +45,22 @@
               <a class="nav-link" href="#">Buy Again</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Gift Cards</a>
+              <a class="nav-link" href="#">Help</a>
             </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Hello, Dewan Accounts & Lists</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Orders</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Prime</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Cart</a>
+                </li>
           </ul>
         </nav>
         <br>
-
-
     </body>
 </html>
