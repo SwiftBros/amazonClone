@@ -8,7 +8,7 @@
 }
 
 .login-row {
-    height: 600px;
+    height: 570px;
 }
 
 .login-box {
@@ -32,4 +32,64 @@
 .login-form {
     font-size: 12px;
     font-weight: bold;
+}
+
+.login-pw-text {
+    float: right;
+    color: #0645AD;
+    font-weight: normal;
+}
+
+.login-form input[type=submit] {
+    width: 100%;
+    background-color: #f7e34c;
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 100%;
+
+}
+
+.login-form input[type=submit]:hover {
+  background-color: #F0C143;
+}
+
+.hyperlink {
+    color: #0645AD;
+}
+
+.login-text-2 {
+    font-size: 12px;
+}
+
+.divider {
+	width:100%;
+	text-align: center;
+}
+
+.divider hr {
+	margin-left: auto;
+	margin-right: auto;
+	width: 38%;
+    margin-top: 10px;
+}
+
+.left {
+	float:left;
+}
+
+.right {
+	float:right;
+}
+
+.sign-in-form input[type=submit] {
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 100%;
+    font-size: 12px;
+    background-color: #E1E4EA;
+}
+
+.sign-in-form input[type=submit]:hover {
+  background-color: #c8cbd1;
 }

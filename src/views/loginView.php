@@ -43,8 +43,40 @@
                             <br />
                             Email (phone for mobile accounts)<br />
                             <input type="email" name="email" style="width: 100%;" /><br /><br />
-                            Password<br />
+                            Password
+                            <span class="login-pw-text">Forgot your password?</span>
+                            <br />
                             <input type="password" name="password" style="width: 100%;" />
+                            <br /><br />
+                            <input type="submit" value="Sign in" />
+                            <br />
+                        </form>
+                    </div>
+
+                    <div class="login-text-2">
+                        <br />
+                        <span>By continuing, you agree to Amazon's</span>
+                        <span class="hyperlink">Conditions of Use</span>
+                        <span>and</span>
+                        <span class="hyperlink">Privacy Notice.</span>
+
+                        <br /><br />
+                        <input type="checkbox" />
+                        <span>Keep me signed in.</span>
+                        <span class="hyperlink">Details</span>
+
+                        <br /><br /><br />
+
+                        <div class="divider">
+                            <hr class="left"/>
+                            <span style="color: #8B8B8B;">New to Amazon?</span>
+                            <hr class="right" />
+                        </div>
+                    </div>
+
+                    <div class="sign-in-form">
+                        <form>
+                            <input type="submit" value="Create your Amazon account" />
                         </form>
                     </div>
                 </div>
