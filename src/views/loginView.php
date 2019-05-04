@@ -82,5 +82,26 @@
                 </div>
             </div>
         </div>
+
+        <footer class="page-footer fixed-bottom">
+            <div class="container-fluid">
+                <!-- Login footer -->
+                <div class="row login-footer">
+                    <div class="col-12" align="center">
+                        <span>Learn more about AmazonSmile</span> &nbsp&nbsp&nbsp
+                        <span>Back to Amazon.com</span> &nbsp&nbsp&nbsp
+                        <span>Represent a charitable organization? Visit org.amazon.com</span> &nbsp&nbsp&nbsp
+                        <span>Conditions of Use</span> &nbsp&nbsp&nbsp
+                        <span>Privacy Notice</span> &nbsp&nbsp&nbsp
+
+                        <br />
+
+                        <div class="footer-copyright text-center py-3">
+                            <span id="copyright">© 1996-2019, Amazon.com, Inc. or its affiliates</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
