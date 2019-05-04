@@ -43,7 +43,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
 	if(empty($errors)){ //If the user filled all the form fields
 		//Create a query to insert a record
-		$query = "INSERT INTO users (first_name, last_name, email, password, reg_date)VALUES('$fn','$ln','$e',SHA1('$p'), NOW())";
+		$query = "INSERT INTO users (name, email, password)VALUES('$n','$e',SHA1('$p'))";
 
 		$run = mysqli_query($dbc, $query); //Run the query
 
