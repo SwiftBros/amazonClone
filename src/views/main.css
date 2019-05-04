@@ -78,13 +78,13 @@ input{
 .dropbtn {
   background-color: #222F3D;
   color: white;
-  padding-top: 24px;
+  padding: 0px;
   /* padding: 16px; */
-  /* margin-top: 20px; */
+  margin-top: 0px;
   font-size: 15px;
   border: none;
-  width: 170px;
-  height: 50px;
+  width: 100px;
+  height: 30px;
 }
 
 .dropbtn2 {
@@ -102,6 +102,7 @@ input{
 .dropdown {
   position: relative;
   display: inline-block;
+  margin-bottom: 0px;
 }
 
 /* Dropdown Content (Hidden by Default) */
@@ -123,10 +124,13 @@ input{
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
+.dropdown-content, .dropdown-content2 a:hover {background-color: #ddd;}
 
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {display: block;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown:hover .dropbtn, .dropbtn2 {
+    /* background-color: #3e8e41; */
+    border: 1px solid gray;
+}
