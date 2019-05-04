@@ -1,0 +1,25 @@
+.results-header {
+    font-size: 12px;
+    padding: 10px 10px 10px 10px;
+    border: 1px solid #CCCCCC;
+}
+
+#item-results {
+    color: #C35629;
+    font-weight: bold;
+}
+
+.search-items{
+    border: 1px solid #CCCCCC;
+    font-size: 13px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.left-sidebar {
+    border-right: 1px solid #CCCCCC;
+}
+
+.sidebar-category {
+    font-weight: bold;
+}
