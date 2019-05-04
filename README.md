@@ -34,6 +34,13 @@ Full-stack web that mimics Amazon's website.
 - [ ] Cart Page
 - [ ] Checkout Page
 
+## Database Tables
+- Users (Form)
+- Products (Hardcoded + Dynamic through forms)
+- Charities (HARDCODED ON SQL BACKEND)
+- Transaction (Adding into Transaction Table/ Displaying that information)
+
+
 ## GIF Recording Demo
 *IMGUR Placeholder*
 
