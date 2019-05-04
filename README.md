@@ -5,13 +5,13 @@ Created by Matt and Rageeb
 Full-stack web that mimics Amazon's website.
 
 ## Features
+- [ ] User can **login**
+- [ ] User can **choose a charity** to donate to
 - [ ] User can **search** for products
 - [ ] User can **filter** products by categories
     - Review/Rating
     - Prime/Not Prime
     - Condition
-- [ ] User can **choose a charity** to donate to
-- [ ] User can **login**
 - [ ] User can **sort** items by price/reviews
     - Price: Low to High
     - Price: High to Low
@@ -20,7 +20,8 @@ Full-stack web that mimics Amazon's website.
 - [ ] User can **confirm a purchase** using PayPal/Credit Cards
 
 ## Pages
-- [ ] Login Page
+- [x] Login Page
+- [x] Signup Page
 - [x] Home Page
     - [ ] Charity Page hover-over (Header)
 - [ ] Charity Page
