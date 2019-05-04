@@ -89,7 +89,7 @@
                     <img src="images/prime-deals.jpg" alt="Prime member deals image" class="img-fluid" />
                     <div class="card-text">Deals and products just for Prime members</div>
 
-                    <div class="card-text" style="padding-top: 20px; color:#0645AD">Learn more</div>
+                    <div class="card-text" style="padding-top: 20px; color:#0645AD"><br />Learn more</div>
                 </div>
 
                 <div class="col-md-3 col-sm-3 col-xs-12 rounded-0 card">

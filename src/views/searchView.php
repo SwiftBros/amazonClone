@@ -43,7 +43,8 @@
             <div class="row search-items">
                 <div class="col-3 left-sidebar">
                     <span class="sidebar-category">Amazon Prime</span><br />
-                    <input type="checkbox" name="prime" value="false"> Prime<br /><br />
+                    <input type="checkbox" name="prime" value="false"><img src="images/prime.png" class="prime"/>
+                    <br /><br />
 
                     <span class="sidebar-category">Delivery Day</span><br />
                     <input type="checkbox" name="delivery" value="false"> Get It by Tomorrow<br /><br />
@@ -61,7 +62,22 @@
                 </div>
 
                 <div class="col-9 item-records">
-                    test2
+
+                    <!-- Start: RECYCLE ROW ITEM (THIS WHOLE DIV) BASED ON NUM OF ENTRIES -->
+                    <div class="row item">
+                        <div class="col-3 item-image">
+                            <img src="images/headphones-2.jpg" />
+                            <br />
+                        </div>
+
+                        <div class="col-9">
+                            <span id="item-desc">On Ear Headphones with Mic, Vogek Lightweight Portable Fold-Flat Stereo Bass Headphones with 1.5M Tangle Free Cord and Microphone-Black</span><br />
+                            <img src="images/4-stars.png" />
+                            <span id="review-num">248</span><br /><br />
+                            <sup class="superscript">$</sup><span id="price">12</span><sup class="superscript">99</sup>
+                        </div>
+                    </div>
+                    <!-- End: Recycle up to this point -->
                 </div>
             </div>
         </div>

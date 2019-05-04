@@ -1,7 +1,7 @@
 .results-header {
     font-size: 12px;
     padding: 10px 10px 10px 10px;
-    border: 1px solid #CCCCCC;
+    border: 2px 1px 0px 1px solid #CCCCCC;
 }
 
 #item-results {
@@ -12,14 +12,50 @@
 .search-items{
     border: 1px solid #CCCCCC;
     font-size: 13px;
-    padding-top: 10px;
     padding-left: 10px;
 }
 
 .left-sidebar {
+    border-top: 1px solid #CCCCCC;
     border-right: 1px solid #CCCCCC;
+    padding-top: 10px;
 }
 
 .sidebar-category {
     font-weight: bold;
+}
+
+.prime {
+    width: 20%;
+}
+
+/* .item-records {
+    border-top: 1px solid #CCCCCC;
+} */
+
+.item {
+    border-top: 1px solid #CCCCCC;
+    padding: 20px 10px 20px 10px;
+}
+
+.item-image img {
+    width: 90%;
+}
+
+#item-desc {
+    font-size: 16px;
+}
+
+#review-num {
+    color: #0645AD;
+    margin-left: 5px;
+}
+
+.superscript {
+    font-size: 12px;
+}
+
+#price {
+    font-size: 22px;
+    /* font-weight: bold; */
 }
