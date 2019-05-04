@@ -1,0 +1,56 @@
+.aligncenter {
+    text-align: center;
+}
+
+.logo {
+    height: 40px;
+    margin-top: 20px;
+}
+
+.signup-row {
+    height: 480px;
+}
+
+.signup-box {
+    border: 1px solid gray;
+}
+
+.signup-text {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+#createAccount {
+    font-size: 27px;
+}
+
+.signup-form {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#pass-text {
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.signup-form input[type=submit] {
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 5px;
+    height: 100%;
+    font-size: 12px;
+    background-color: #f7e34c;
+}
+
+.signup-form input[type=submit]:hover {
+  background-color: #F0C143;
+}
+
+.hyperlink {
+    color: #0645AD;
+}
+
+.signup-text-2 {
+    font-size: 12px;
+}
