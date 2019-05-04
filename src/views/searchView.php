@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8" />
@@ -15,7 +15,8 @@
         <title>Amazon.com</title>
     </head>
 
-    <body>
+    <body> -->
+<?php include 'header.php'; ?>
         <div class="container-fluid">
             <!-- Results header -->
             <div class="row results-header">
@@ -82,5 +83,7 @@
                 </div>
             </div>
         </div>
-    </body>
-</html>
+    <!-- </body>
+</html> -->
+
+<?php include 'footer.php'; ?>
