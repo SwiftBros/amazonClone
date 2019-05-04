@@ -96,13 +96,11 @@
                     <label class="card-title">Deal of the day</label>
                     <img src="images/headphones-01.jpeg" alt="Daily deal" class="img-fluid" />
                     <div class="card-text">Save up to 25% on Headphones</div>
-                    <div class="card-text"><span class="daily-price">$25</span><div>
+                    <div class="card-text"><span class="daily-price">$25</span></div>
                     <div class="card-text" style="padding-top: 20px; color:#0645AD">See all deals</div>
                 </div>
             </div>
         </div>
-    </div>
-</div>
 <br>
 <br>
 <br>

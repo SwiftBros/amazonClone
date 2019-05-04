@@ -11,6 +11,7 @@
 
         <!-- Note: External stylesheets must come after Bootstrap stylesheet -->
         <link href="CSS/indexView-styles.css" rel="stylesheet" type="text/css" />
+        <link href="CSS/searchView-styles.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="CSS/header.css">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
@@ -78,6 +79,5 @@
                 </li>
           </ul>
         </nav>
-        <br>
     <!-- </body>
 </html> -->
