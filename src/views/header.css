@@ -1,0 +1,18 @@
+#navbar1 {
+    background-color:#222F3D;
+    height:60px;
+    color: white;
+}
+
+#navbar2 {
+    background-color:#222F3D;
+    color: white;
+}
+
+a {
+    font-size: 10px;
+}
+a:hover {
+  /* background-color: yellow; */
+  border: 1px solid gray;
+}
