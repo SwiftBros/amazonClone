@@ -31,6 +31,11 @@ div#submitForm input {
   margin-left: -160px;
 }
 
+#footer {
+    background-color:#222F3D;
+    color: white;
+}
+
 /* input[type="submit"] {
     margin-left: -150px;
     height: 30px;
@@ -40,6 +45,10 @@ div#submitForm input {
 
 #supporting {
     margin-left: 300px;
+}
+
+#firstli {
+    margin-left: 500px;
 }
 
 @media (max-width: 575.98px) {
