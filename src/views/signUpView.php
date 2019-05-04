@@ -33,10 +33,10 @@
                     </div>
 
                     <div class="signup-form">
-                        <form>
+                        <form action="register.php" method="post">
                             <br />
                             Your name
-                            <input type="text" name="yourName" style="width:100%;" /><br /><br />
+                            <input type="text" name="name" style="width:100%;" /><br /><br />
                             Email
                             <input type="email" name="email" style="width: 100%;" /><br /><br />
                             Password
