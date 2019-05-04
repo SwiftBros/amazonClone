@@ -20,7 +20,7 @@ Full-stack web that mimics Amazon's website.
 - [ ] User can **confirm a purchase** using PayPal/Credit Cards
 
 ## Pages
-test
+
 - [x] Login Page
 - [x] Signup Page
 - [x] Home Page
