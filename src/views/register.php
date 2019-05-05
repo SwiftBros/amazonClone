@@ -5,6 +5,7 @@
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	// include('functions.php'); //Include the function.php file
 	$pageTitle = "Register"; //Set the page title
+	include('functions.php'); //Include the function.php file
 
 	// include('header.php'); //Include the header.php file
 	require('mysqli_connect.php');// Connect to the db

