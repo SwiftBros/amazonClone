@@ -3,19 +3,19 @@
 
 // Check for form submission
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
-	include('functions.php'); //Include the function.php file
+	// include('functions.php'); //Include the function.php file
 	$pageTitle = "Register"; //Set the page title
 
-	include('header.php'); //Include the header.php file
+	// include('header.php'); //Include the header.php file
 	require('mysqli_connect.php');// Connect to the db
 
 	$errors = array(); //Intialize an array that will store error messages for the user
 
 	//Check for data entered into the 'first_name' form field
-	if(empty($_POST['first_name'])){
+	if(empty($_POST['name'])){
 		$errors[] = "You forgot to enter your first name.";
 	}else{
-		$fn = mysqli_real_escape_string($dbc, $_POST['first_name']);
+		$n = mysqli_real_escape_string($dbc, $_POST['name']);
 		/*This function escapes special characters in a string for use in an SQL statement. Both parameters are required: the first specifies the MySQL connection to use, the second is the string to be escaped
 		*/
 	}
@@ -68,6 +68,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	}
 	mysqli_close($dbc);//Close the db connection
 
-	include('footer.php');
+	// include('footer.php');
 }
 ?>
