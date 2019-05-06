@@ -33,6 +33,20 @@ if (mysqli_num_rows($run) == 1){
 }else{
 	echo "Error!";
 }
+
+// If no cookie is present, redirect the user:
+if (!isset($_SESSION['user_id'])) {
+
+	// Need the function:
+	require ('includes/functions.php');
+	redirect_user();
+
+} else { // Delete the cookies:
+	$_SESSION = array(); // Clear the variables.
+	session_destroy(); // Destroy the session itself.
+	setcookie ('PHPSESSID', '', time()-3600, '/Class23/sessions', '', 0, 0); // Destroy the cookie.
+}
+
 mysqli_close($dbc);
 
 ?>
@@ -104,10 +118,16 @@ mysqli_close($dbc);
               <a class="nav-link" href="#">Help</a>
             </li>
             <li class="nav-item">
-               <?php
-                    echo "<a class=\"nav-link\" href=\"#\">Hello, ".$row['name']. "Accounts & Lists</a>";
-               ?>
-              <!-- <a class="nav-link" href="#">Hello, Dewan Accounts & Lists</a> -->
+                <div class="dropdown">
+                  <!-- <button class="dropbtn">Dropdown</button> -->
+                  <a class="nav-link" href="#">Hello <?php echo $row['name'];?>, Accounts & Lists</a>
+                  <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="login.php">Sign Out</a>
+                  </div>
+                </div>
+
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Orders</a>

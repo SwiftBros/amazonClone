@@ -22,7 +22,7 @@
         $_SESSION['first_name'] = $data['first_name'];
 
         // Redirect:
-        redirect_user('index.php');
+        redirect_user('indexView.php');
 
     } else { // Unsuccessful!
 
@@ -35,6 +35,20 @@
     mysqli_close($dbc); // Close the database connection.
 
     } // End of the main submit conditional.
+
+
+    // session_start();
+    // if (!isset($_SESSION['user_id'])) {
+    //
+    // 	// Need the function:
+    // 	require ('includes/functions.php');
+    // 	redirect_user();
+    //
+    // } else { // Delete the cookies:
+    // 	$_SESSION = array(); // Clear the variables.
+    // 	session_destroy(); // Destroy the session itself.
+    // 	setcookie ('PHPSESSID', '', time()-3600, '/Class23/sessions', '', 0, 0); // Destroy the cookie.
+    // }
 
     include('loginView.php');
 

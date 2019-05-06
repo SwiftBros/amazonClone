@@ -66,7 +66,7 @@
                             <img src="images/profile.png" alt="profile_pic" class="img-fluid profile" />
                         </div>
                         <div class="col-8 pl-0">
-                            <span class="card-title">Hi, Matthew</span>
+                            <span class="card-title">Hi, <?php echo $row['name'];?></span>
                             <div class="card-text"><span style="color:#C35629">AmazonSmile</span> <span>donations</span></div>
                             <div class="card-text">generated: $0.00</div>
                         </div>
