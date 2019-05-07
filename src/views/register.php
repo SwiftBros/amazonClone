@@ -49,7 +49,30 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$run = mysqli_query($dbc, $query); //Run the query
 
 		if($run){//If the query ran successfully
-			echo "<h1>Thank you!</h1> <p>You have been registered</p>";
+			// echo "<h1>Thank you!</h1> <p>You have been registered</p>";
+
+
+			// I will attempt to redirect user to index with the correct credentials
+
+			list ($check, $data) = check_login($dbc, $e, $p);
+
+		    if ($check) { // OK!
+
+		        // Set the session data:
+		        session_start();
+		        $_SESSION['user_id'] = $data['user_id'];
+		        $_SESSION['name'] = $data['name'];
+
+		        // Redirect:
+		        redirect_user('indexView.php');
+
+		    } else { // Unsuccessful!
+
+		        // Assign $data to $errors for error reporting
+		        // in the login_page.inc.php file.
+		        $errors = $data;
+
+		    }
 		}else{ //If the query did not run successfully
 			echo "<h1>Error!<h1> <p>You could not be registered. Please try again.</p>";
 

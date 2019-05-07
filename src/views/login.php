@@ -19,7 +19,7 @@
         // Set the session data:
         session_start();
         $_SESSION['user_id'] = $data['user_id'];
-        $_SESSION['first_name'] = $data['first_name'];
+        $_SESSION['name'] = $data['name'];
 
         // Redirect:
         redirect_user('indexView.php');

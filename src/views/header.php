@@ -34,18 +34,6 @@ if (mysqli_num_rows($run) == 1){
 	echo "Error!";
 }
 
-// If no cookie is present, redirect the user:
-if (!isset($_SESSION['user_id'])) {
-
-	// Need the function:
-	require ('includes/functions.php');
-	redirect_user();
-
-} else { // Delete the cookies:
-	$_SESSION = array(); // Clear the variables.
-	session_destroy(); // Destroy the session itself.
-	setcookie ('PHPSESSID', '', time()-3600, '/Class23/sessions', '', 0, 0); // Destroy the cookie.
-}
 
 mysqli_close($dbc);
 
@@ -124,7 +112,7 @@ mysqli_close($dbc);
                   <div class="dropdown-content">
                     <a href="#">Link 1</a>
                     <a href="#">Link 2</a>
-                    <a href="login.php">Sign Out</a>
+                    <a href="http://localhost:8080/amazonClone/src/views/loggedOutView.php">Sign Out</a>
                   </div>
                 </div>
 
