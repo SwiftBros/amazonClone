@@ -10,10 +10,10 @@
 .cart-table-header {
     font-size: 12px;
     color: #555555;
+    border-bottom: 1px solid #CCCCCC;
 }
 
 .cart-table {
-    border-top: 1px solid #CCCCCC;
     border-bottom: 1px solid #CCCCCC;
 }
 
@@ -21,10 +21,8 @@
     font-size: 16px;
     font-weight: bold;
     color: #B12E25;
+    margin-top: 10px;
 }
-
-
-
 
 .checkout-card {
     border: 1px solid #CCCCCC;
@@ -40,6 +38,10 @@
     font-weight: bold;
 }
 
+.quantity-form {
+    margin-top: 10px;
+}
+
 .checkout-card input[type=submit] {
     width: 100%;
     border: 1px solid gray;
@@ -52,4 +54,8 @@
 
 .checkout-card input[type=submit]:hover {
   background-color: #F0C143;
+}
+
+.item-row {
+    margin: 10px 10px 10px 10px;
 }
