@@ -18,26 +18,15 @@ $pageTitle = "Welcome";
 include('mysqli_connect.php');
 
 $query = "SELECT user_id, name, email FROM users WHERE user_id = ".$_SESSION['user_id'];
-$run = mysqli_query($dbc, $query);
 
-if (mysqli_num_rows($run) == 1){
-	$row = mysqli_fetch_array($run, MYSQLI_ASSOC);
-	// Print a customized message:
-	// echo "<h1>Welcome!</h1>
-	// <br />&nbsp;
-	// <p>You are now logged in, ".$row['name']."!</p>
-	// <p style='text-align:center;'><img src='https://via.placeholder.com/150x150'><br>
-	// <strong>".$row['name']."</strong><br>
-	// ".$row['email']."</p>
-	// <p style='text-align:center'><a href=\"logout.php\">Logout</a></p>";
-}else{
-	echo "Error!";
-}
-
+$run = mysqli_query($dbc, $query); //Run the query and store the results in a variable
 
 mysqli_close($dbc);
 
+
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -69,11 +58,13 @@ mysqli_close($dbc);
             <ul class="navbar-nav">
                 <li><img id='logo' alt="AmazonLogo" src="images/amaz.png" /></li>
             </ul>
-            <input type="text"/>
+			<form action="register.php" method="post">
+            <input type="text" name="search"/>
             <div id="submitForm">
                 <button type="submit" class="icon button"><i class="fa fa-search"></i></button>
                 <!-- <input type="submit" value="Search" name="submit"> -->
             </div>
+			</form>
             <img id='backToSchool' src="http://blog.neurogistics.com/wp-content/uploads/2014/08/Back-To-School-Special-Banner.jpg" alt="" />
         </nav>
         <nav id="navbar2" class="navbar navbar-expand-sm">
