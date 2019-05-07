@@ -89,7 +89,7 @@ if (isset($errors) && !empty($errors)) {
                     </div>
 
                     <div class="sign-in-form">
-                        <form>
+                        <form action="signUpView.php">
                             <input type="submit" value="Create your Amazon account" />
                         </form>
                     </div>

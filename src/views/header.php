@@ -33,6 +33,8 @@ if (mysqli_num_rows($run) == 1){
 }else{
 	echo "Error!";
 }
+
+
 mysqli_close($dbc);
 
 ?>
@@ -104,10 +106,16 @@ mysqli_close($dbc);
               <a class="nav-link" href="#">Help</a>
             </li>
             <li class="nav-item">
-               <?php
-                    echo "<a class=\"nav-link\" href=\"#\">Hello, ".$row['name']. "Accounts & Lists</a>";
-               ?>
-              <!-- <a class="nav-link" href="#">Hello, Dewan Accounts & Lists</a> -->
+                <div class="dropdown">
+                  <!-- <button class="dropbtn">Dropdown</button> -->
+                  <a class="nav-link" href="#">Hello <?php echo $row['name'];?>, Accounts & Lists</a>
+                  <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="http://localhost:8080/amazonClone/src/views/loggedOutView.php">Sign Out</a>
+                  </div>
+                </div>
+
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Orders</a>
