@@ -33,7 +33,7 @@
                     </div>
 
                     <div class="signup-form">
-                        <form action="searchView.php" method="post">
+                        <form action="indexView.php" method="post">
                             <br />
                             Your name
                             <input type="text" name="name" style="width:100%;" /><br /><br />

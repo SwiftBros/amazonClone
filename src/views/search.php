@@ -1,13 +1,14 @@
 
 <?php
 include 'header.php';
-	echo "
+$searchQ = $_POST['search'];
+?>
         <div class='container-fluid'>
             <!-- Results header -->
             <div class='row results-header'>
                 <div class='col-12'>
                     <span style='float: left;'>1-16 over 100,000 results for
-                        <span id='item-results'>'".$searchQ."'</span>
+                        <span id='item-results'><?php echo $searchQ; ?></span>
                     </span>
                     <span style='float: right;'>
                         <form action=''>
@@ -44,7 +45,9 @@ include 'header.php';
                 </div>
 
                 <div class='col-9 item-records'>
-				";
+
+
+<?php
 
 
 // require_once ('includes/functions.php');
