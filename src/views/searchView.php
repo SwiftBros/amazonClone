@@ -298,7 +298,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 							<!-- Add this img if item is prime -->
                             <img src="images/prime.png" class="prime" />
 
-                            <span class="prime-get-by">Get it as soon as <strong id="prime-date">Mon, May 6</strong></span>
+                            <span class="prime-get-by">Get it as soon as <strong id="prime-date"></strong></span>
 
 <script>
 	var result = primeDayString + ", " + primeMonthString + " " + dd;

@@ -112,9 +112,25 @@
             <div class="col-3">
                 <div class="checkout-card">
                     <!-- TODO: Dynamically set price -->
-                    <div id="subtotal-label">Subtotal (2 items): <span style="color: #B12E25;">$12.99</span></div>
+                    <div id="subtotal-label">Subtotal (2 items): <span id="subtotal-label-price"></span></div>
                     <input type="checkbox" /><span id="checkbox-gift">&nbsp;&nbsp;This order contains a gift</span>
                     <br /><br />
+
+<script>
+    // Script to dynamically set price in subtotal label
+    var priceArr = document.querySelectorAll("#cart-price");
+
+    var subtotal = 0;
+    for (var i = 0; i < priceArr.length; i++) {
+        var priceStr = priceArr[i].innerHTML
+        var priceFloat = Number(priceStr.substring(1));
+        subtotal += priceFloat;
+    }
+    subtotal = subtotal.toFixed(2); // 2 decimal places
+    console.log(subtotal);
+
+    document.getElementById("subtotal-label-price").innerHTML = "$" + subtotal;
+</script>
 
                     <form action="transactionSuccessful.php" method="post">
                         <input type="submit" value="Proceed to checkout" />
