@@ -100,7 +100,7 @@
             <div class="col-3">
                 <div class="checkout-card">
                     <!-- TODO: Dynamically set price -->
-                    <div id="subtotal-label">Subtotal (2 items): <span id="subtotal-label-price"></span></div>
+                    <div id="subtotal-label">Subtotal (x items): <span id="subtotal-label-price"></span></div>
                     <input type="checkbox" /><span id="checkbox-gift">&nbsp;&nbsp;This order contains a gift</span>
                     <br /><br />
 
