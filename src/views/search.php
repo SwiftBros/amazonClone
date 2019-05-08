@@ -103,15 +103,15 @@ echo "
 				<!-- Start: RECYCLE ROW ITEM (THIS WHOLE DIV) BASED ON NUM OF ENTRIES -->
 				<div class='row item'>
 					<div class='col-3 item-image'>
-						<img src='images/headphones-2.jpg' />
+						<img src='".$row['product_img_url']."' />
 						<br />
 					</div>
 
 					<div class='col-9'>
 						<span class='item-desc'>".$row['name']."1</span><br />
 						<img src='images/4-stars.png' />
-						<span class='review-num'>248</span><br /><br />
-						<sup class='superscript'>$</sup><span class='price'>12</span><sup class='superscript'>99</sup><br />
+						<span class='review-num'>".$row['review_num']."</span><br /><br />
+						<sup class='superscript'>$</sup><span class='price'>".$row['price_dollars']."</span><sup class='superscript'>".$row['price_cents']."</sup><br />
 
 <script>
 // JS Functionality for getting date 2 days from now
