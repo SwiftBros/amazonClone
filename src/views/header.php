@@ -21,6 +21,13 @@ $query = "SELECT user_id, name, email FROM users WHERE user_id = ".$_SESSION['us
 
 $run = mysqli_query($dbc, $query); //Run the query and store the results in a variable
 
+if (mysqli_num_rows($run) == 1){
+	$row = mysqli_fetch_array($run, MYSQLI_ASSOC);
+	// Print a customized message:
+}else{
+	echo "Error!";
+}
+
 mysqli_close($dbc);
 
 
@@ -59,12 +66,12 @@ mysqli_close($dbc);
             <ul class="navbar-nav">
                 <li><img id='logo' alt="AmazonLogo" src="images/amaz.png" /></li>
             </ul>
-			<form action="register.php" method="post">
-            <input type="text" name="search"/>
-            <div id="submitForm">
-                <button type="submit" class="icon button"><i class="fa fa-search"></i></button>
-                <!-- <input type="submit" value="Search" name="submit"> -->
-            </div>
+			<form action="searchView.php" method="post">
+	            <input type="text" name="search"/>
+	            <div id="submitForm">
+	                <button type="submit" class="icon button"><i class="fa fa-search"></i></button>
+	                <!-- <input type="submit" value="Search" name="submit"> -->
+	            </div>
 			</form>
             <img id='backToSchool' src="http://blog.neurogistics.com/wp-content/uploads/2014/08/Back-To-School-Special-Banner.jpg" alt="" />
         </nav>

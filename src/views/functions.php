@@ -76,4 +76,44 @@ function check_login($dbc, $email = '', $pass = '') {
 
 } // End of check_login() function.
 
+function check_search($dbc, $search = '') {
+
+	$errors = array(); // Initialize error array.
+
+	// Validate the email address:
+	if (empty($search)) {
+		$errors[] = 'You forgot to enter your email address.';
+	} else {
+		$s = mysqli_real_escape_string($dbc, trim($search));
+	}
+
+
+	if (empty($errors)) { // If everything's OK.
+
+		// Retrieve the user_id and first_name for that email/password combination:
+		$q = "SELECT product_id, product_img_url, name, review_stars, review_num, price_dollars, price_cents, is_prime, product_condition, tag1, tag2 FROM users WHERE name = " .$s. " OR tag1 = " .$s. "OR tag2 = " .$s;
+		// $q = "SELECT user_id, name FROM users WHERE email='$e' AND password=SHA1('$p')";
+		$r = mysqli_query($dbc, $q); // Run the query.
+
+		// Check the result:
+		if (mysqli_num_rows($r) >= 1) {
+
+			// Fetch the record:
+			$row = mysqli_fetch_array ($r, MYSQLI_ASSOC);
+
+			// Return true and the record:
+			return array(true, $row);
+
+		} else { // Not a match!
+			$errors[] = 'The email address and password entered do not match those on file.';
+		}
+
+	} // End of empty($errors) IF.
+
+	// Return false and the errors:
+	return array(false, $errors);
+
+} // End of check_login() function.
+
+
 ?>
