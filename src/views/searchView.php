@@ -136,17 +136,17 @@
                 <div class="col-9 item-records">
 
                     <!-- Start: RECYCLE ROW ITEM (THIS WHOLE DIV) BASED ON NUM OF ENTRIES -->
-                    <div class="row item">
-                        <div class="col-3 item-image">
-                            <img src="images/headphones-2.jpg" />
+                    <div class='row item'>
+                        <div class='col-3 item-image'>
+                            <img src='images/headphones-2.jpg' />
                             <br />
                         </div>
 
-                        <div class="col-9">
-                            <span class="item-desc">On Ear Headphones with Mic, Vogek Lightweight Portable Fold-Flat Stereo Bass Headphones with 1.5M Tangle Free Cord and Microphone-Black</span><br />
-                            <img src="images/4-stars.png" />
-                            <span class="review-num">248</span><br /><br />
-                            <sup class="superscript">$</sup><span class="price">12</span><sup class="superscript">99</sup><br />
+                        <div class='col-9'>
+                            <span class='item-desc'>On Ear Headphones with Mic, Vogek Lightweight Portable Fold-Flat Stereo Bass Headphones with 1.5M Tangle Free Cord and Microphone-Black</span><br />
+                            <img src='images/4-stars.png' />
+                            <span class='review-num'>248</span><br /><br />
+                            <sup class='superscript'>$</sup><span class='price'>12</span><sup class='superscript'>99</sup><br />
 
 <script>
 	// JS Functionality for getting date 2 days from now
@@ -160,25 +160,25 @@
 	var primeDayString;
 	switch (date.getDay()) {
 		case 0:
-			primeDayString = "Sun";
+			primeDayString = 'Sun';
 			break;
 		case 1:
-			primeDayString = "Mon";
+			primeDayString = 'Mon';
 			break;
 		case 2:
-			primeDayString = "Tues";
+			primeDayString = 'Tues';
 			break;
 		case 3:
-			primeDayString = "Wed";
+			primeDayString = 'Wed';
 			break;
 		case 4:
-			primeDayString = "Thurs";
+			primeDayString = 'Thurs';
 			break;
 		case 5:
-			primeDayString = "Fri";
+			primeDayString = 'Fri';
 			break;
 		case 6:
-			primeDayString = "Sat";
+			primeDayString = 'Sat';
 			break;
 		default:
 	    	console.log('Error: Day value is invalid.');
@@ -188,40 +188,40 @@
 	var primeMonthString;
 	switch (date.getMonth()) {
 		case 0:
-			primeMonthString = "Jan";
+			primeMonthString = 'Jan';
 			break;
 		case 1:
-			primeMonthString = "Feb";
+			primeMonthString = 'Feb';
 			break;
 		case 2:
-			primeMonthString = "Mar";
+			primeMonthString = 'Mar';
 			break;
 		case 3:
-			primeMonthString = "Apr";
+			primeMonthString = 'Apr';
 			break;
 		case 4:
-			primeMonthString = "May";
+			primeMonthString = 'May';
 			break;
 		case 5:
-			primeMonthString = "Jun";
+			primeMonthString = 'Jun';
 			break;
 		case 6:
-			primeMonthString = "Jul";
+			primeMonthString = 'Jul';
 			break;
 		case 7:
-			primeMonthString = "Aug";
+			primeMonthString = 'Aug';
 			break;
 		case 8:
-			primeMonthString = "Sep";
+			primeMonthString = 'Sep';
 			break;
 		case 9:
-			primeMonthString = "Oct";
+			primeMonthString = 'Oct';
 			break;
 		case 10:
-			primeMonthString = "Nov";
+			primeMonthString = 'Nov';
 			break;
 		case 11:
-			primeMonthString = "Dec";
+			primeMonthString = 'Dec';
 			break;
 		default:
 	    	console.log('Error: Month value is invalid.');
@@ -240,18 +240,18 @@
 
 </script>
 							<!-- Add this img if item is prime -->
-                            <img src="images/prime.png" class="prime" />
+                            <img src='images/prime.png' class='prime' />
 
-                            <span class="prime-get-by">Get it as soon as <strong id="prime-date"></strong></span>
+                            <span class='prime-get-by'>Get it as soon as <strong id='prime-date'></strong></span>
 
 <script>
-	var result = primeDayString + ", " + primeMonthString + " " + dd;
+	var result = primeDayString + ', ' + primeMonthString + ' ' + dd;
 	console.log(result);
-	var setDate = document.getElementById("prime-date");
+	var setDate = document.getElementById('prime-date');
 	setDate.innerHTML = result;
 </script>
 
-							<input type="button" value="Add to cart" id="cart-button"/>
+							<input type='button' value='Add to cart' id='cart-button'/>
                         </div>
                     </div>
                     <!-- End: Recycle up to this point -->
