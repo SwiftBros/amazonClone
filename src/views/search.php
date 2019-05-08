@@ -216,12 +216,33 @@ var setDate = document.getElementById('prime-date');
 setDate.innerHTML = result;
 </script>
                         <form action='cartInsert.php' method='post'>
-                            <input type='button' value='Add to cart' id='cart-button'/>
-                        </form>
-					</div>
-				</div>
-				<!-- End: Recycle up to this point -->
+                            <input type='submit' value='Add to cart' id='cart-button'/>
 ";
+
+
+// SQL Query variables to pass to cartInsert.php
+$product_img_url = $row['product_img_url'];
+$name = $row['name'];
+$price_dollars = $row['price_dollars'];
+$price_cents = $row['price_cents'];
+$is_prime = $row['is_prime'];
+
+echo "<input type='hidden' name='product_img_url' value='" .$product_img_url. "'/>";
+echo "<input type='hidden' name='name' value='" .$name. "'/>";
+echo "<input type='hidden' name='price_dollars' value='" .$price_dollars. "'/>";
+echo "<input type='hidden' name='price_cents' value='" .$price_cents. "'/>";
+echo "<input type='hidden' name='is_prime' value='" .$is_prime. "'/>";
+
+echo "
+</form>
+</div>
+</div>
+
+<!-- End: Recycle up to this point -->
+";
+
+
+
 			// 	echo "<tr>
 			// 	<td>".$row['name']."</td>
 			// 	<td>".$row['price_dollars']."</td>
