@@ -20,7 +20,6 @@ if (!isset($_SESSION['user_id'])) {
 $pageTitle = "Welcome";
 
 
-
 $query = "SELECT user_id, name, email FROM users WHERE user_id = ".$_SESSION['user_id'];
 
 $run = mysqli_query($dbc, $query); //Run the query and store the results in a variable
