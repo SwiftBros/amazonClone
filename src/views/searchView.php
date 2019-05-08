@@ -1,153 +1,97 @@
-<!-- <!DOCTYPE html>
-<html lang="en" dir="ltr">
+
+
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <!-- Required meta tags -->
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+        <!-- Bootstrap stylesheet -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+        <!-- Note: External stylesheets must come after Bootstrap stylesheet -->
+        <link href="CSS/indexView-styles.css" rel="stylesheet" type="text/css" />
         <link href="CSS/searchView-styles.css" rel="stylesheet" type="text/css" />
+		<link href="CSS/cartView-styles.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="CSS/header.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-        <title>Amazon.com</title>
+        <title>Amazon Smile</title>
     </head>
+    <body>
+        <!-- Image and text -->
+        <nav id="navbar1" class="navbar">
+            <ul class="navbar-nav">
+                <li><img id='logo' alt="AmazonLogo" src="images/amaz.png" /></li>
+            </ul>
+			<form action="search.php" method="post">
+	            <input type="text" name="search"/>
+	            <div id="submitForm">
+	                <button type="submit" class="icon button"><i class="fa fa-search"></i></button>
+	                <!-- <input type="submit" value="Search" name="submit"> -->
+	            </div>
+			</form>
+            <img id='backToSchool' src="http://blog.neurogistics.com/wp-content/uploads/2014/08/Back-To-School-Special-Banner.jpg" alt="" />
+        </nav>
+        <nav id="navbar2" class="navbar navbar-expand-sm">
+            <ul class="navbar-nav">
+                <li>
+                    <!-- <div id="supporting"> -->
+                    <a id="supporting" class="nav-link" href="#"><p id="orange">Supporting: </p> American Red Cross</a>
+                    <!-- </div> -->
+                </li>
+            </ul>
+        </nav>
+        <nav id="navbar3" class="navbar navbar-expand-sm">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Deliver to Dewan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Browsing History</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Today's Deals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><?php echo $row['name']; ?>'s Amazon.com</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Buy Again</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Help</a>
+            </li>
+            <li class="nav-item">
+                <div class="dropdown">
+                  <!-- <button class="dropbtn">Dropdown</button> -->
+                  <a class="nav-link" href="#">Hello <?php echo $row['name'];?>, Accounts & Lists</a>
+                  <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="http://localhost:8080/amazonClone/src/views/loggedOutView.php">Sign Out</a>
+                  </div>
+                </div>
 
-    <body> -->
-
-<?php include 'header.php'; ?>
-
-<?php
-
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-	// include('functions.php'); //Include the function.php file
-	// $pageTitle = "Search View"; //Set the page title
-	// include('functions.php'); //Include the function.php file
-    //
-	// // include('header.php'); //Include the header.php file
-	// require('mysqli_connect.php');// Connect to the db
-
-	$errors = array(); //Intialize an array that will store error messages for the user
-
-	//Check for data entered into the 'last_name' form field
-	// if(empty($_POST['last_name'])){
-	// 	$errors[] = "You forgot to enter your last name.";
-	// }else{
-	// 	$ln = mysqli_real_escape_string($dbc, $_POST['last_name']);
-	// }
-
-	//Check for data entered into the 'email' form field
-	if(empty($_POST['search'])){
-		$errors[] = "You did not enter anything to search.";
-	}else{
-		$searchQ = mysqli_real_escape_string($dbc, $_POST['search']);
-	}
-
-
-	if(empty($errors)){ //If the user filled all the form fields
-
-        // Create a query
-        $query2 = "SELECT product_id, product_img_url, name, review_stars, review_num, price_dollars, price_cents, is_prime, product_condition, tag1, tag2 FROM users WHERE name = " .$_searchQ. " OR tag1 = " .$searchQ. "OR tag2 = " .$searchQ;
-
-        $run = mysqli_query($dbc, $query2); //Run the query and store the results in a variable
-
-		if($run){//If the query ran successfully
-			// echo "<h1>Thank you!</h1> <p>You have been registered</p>";
-
-
-			// I will attempt to redirect user to index with the correct credentials
-
-			list ($check, $data) = check_login($dbc, $searchQ);
-
-		    if ($check) { // OK!
-
-		        // Set the session data:
-		        // session_start();
-		        // $_SESSION['user_id'] = $data['user_id'];
-		        // $_SESSION['name'] = $data['name'];
-                //
-		        // // Redirect:
-		        // redirect_user('indexView.php');
-                $count = mysqli_num_rows($run); //Count the number of rows returned by the query
-
-                //If the number of rows returned in greater than 0, display the results of the query
-                if($count > 0){
-                	//Print the number of users that exist
-                	echo "<p>There are currently $count products</p>";
-
-                	//Output the query results in a table
-                	echo "<table border='1' class='table'>";
-                	while($row = mysqli_fetch_array($run, MYSQLI_ASSOC)){ //The mysqli_fetch_array function puts the results of the query into an array (can be indexed or associative)
-                		echo "<tr>
-                		<td>".$row['name']."</td>
-                		<td>".$row['price_dollars']."</td>
-                		<td>".$row['price_cents']."</td>";
-                		echo "</tr>";
-                	}
-                	echo "</table>";
-
-
-		    } else { // Unsuccessful!
-
-		        // Assign $data to $errors for error reporting
-		        // in the login_page.inc.php file.
-		        $errors = $data;
-
-		    }
-		}else{ //If the query did not run successfully
-			echo "<h1>Error!<h1> <p>You could not be registered. Please try again.</p>";
-
-			//Print a debugging message
-			echo "<p>".mysqli_error($dbc)."</p>";
-
-		mysqli_close($dbc); //Close the db connection
-		exit(); //Terminate the execution of the script
-		}
-	}else{ //If the user did not fill all the form fields, print the errors
-		echo "<h2>Error!</h2>";
-		echo "<p>The following error(s) have occured:<br />";
-		foreach ($errors as $error){
-			echo " - $error <br />";
-		}
-		echo "Please try again.</p>";
-	}
-	mysqli_close($dbc);//Close the db connection
-
-	// include('footer.php');
-}
-}
-
-// $query2 = "SELECT product_id, product_img_url, name, review_stars, review_num, price_dollars, price_cents, is_prime, product_condition, tag1, tag2 FROM users WHERE name = " .$_searchQ. " OR tag1 = " .$searchQ. "OR tag2 = " .$searchQ;
-//
-// $run = mysqli_query($dbc, $query2); //Run the query and store the results in a variable
-//
-// $count = mysqli_num_rows($run); //Count the number of rows returned by the query
-//
-// //If the number of rows returned in greater than 0, display the results of the query
-// if($count > 0){
-// 	//Print the number of users that exist
-// 	echo "<p>There are currently $count products</p>";
-//
-// 	//Output the query results in a table
-// 	echo "<table border='1' class='table'>";
-// 	while($row = mysqli_fetch_array($run, MYSQLI_ASSOC)){ //The mysqli_fetch_array function puts the results of the query into an array (can be indexed or associative)
-// 		echo "<tr>
-// 		<td>".$row['name']."</td>
-// 		<td>".$row['price_dollars']."</td>
-// 		<td>".$row['price_cents']."</td>";
-// 		echo "</tr>";
-// 	}
-// 	echo "</table>";
-// }else{ //If no records are returned by the query, print a message to the user
-// 	echo "<p>There are currently no registered users</p>";
-// }
-//
-//
-// mysqli_close($dbc);
-
-?>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Orders</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Prime</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cart</a>
+            </li>
+          </ul>
+        </nav>
         <div class="container-fluid">
             <!-- Results header -->
             <div class="row results-header">

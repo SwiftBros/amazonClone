@@ -33,6 +33,21 @@ mysqli_close($dbc);
 
 ?>
 
+<?php
+require_once('functions.php');
+// $pageTitle = "Class 23";
+
+
+if (isset($errors) && !empty($errors)) {
+	echo '<h1>Error!</h1>
+	<p class="error">The following error(s) occurred:<br />';
+	foreach ($errors as $msg) {
+		echo " - $msg<br />\n";
+	}
+	echo '</p><p>Please try again.</p>';
+}
+
+ ?>
 
 
 <!DOCTYPE html>
@@ -66,7 +81,7 @@ mysqli_close($dbc);
             <ul class="navbar-nav">
                 <li><img id='logo' alt="AmazonLogo" src="images/amaz.png" /></li>
             </ul>
-			<form action="searchView.php" method="post">
+			<form action="search.php" method="post">
 	            <input type="text" name="search"/>
 	            <div id="submitForm">
 	                <button type="submit" class="icon button"><i class="fa fa-search"></i></button>

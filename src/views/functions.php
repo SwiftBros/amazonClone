@@ -82,7 +82,7 @@ function check_search($dbc, $search = '') {
 
 	// Validate the email address:
 	if (empty($search)) {
-		$errors[] = 'You forgot to enter your email address.';
+		$errors[] = 'You forgot to enter something in the search address.';
 	} else {
 		$s = mysqli_real_escape_string($dbc, trim($search));
 	}
