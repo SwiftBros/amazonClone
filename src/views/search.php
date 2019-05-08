@@ -2,6 +2,32 @@
 
 <?php include 'header.php'; ?>
 
+<!-- <script>
+    $(document).ready(function() {
+        // $(function() {
+        //     $('form').submit(function() {
+        //         $.ajax({
+        //             type: 'POST',
+        //             url: 'submit.php',
+        //             data: { username: $(this).name.value,
+        //                     password: $(this).password.value }
+        //         });
+        //         return false;
+        //     });
+        // })
+
+        $('#registerForm').submit(function(e) {
+           e.preventDefault();
+           $.ajax({
+                type: 'POST',
+                url: 'cartInsert.php',
+                data: $(this).serialize(),
+                success: window.alert("Added to Cart!");
+           });
+        })
+    });
+</script> -->
+
         <div class="container-fluid">
             <!-- Results header -->
             <div class="row results-header">
@@ -215,7 +241,8 @@ console.log(result);
 var setDate = document.getElementById('prime-date');
 setDate.innerHTML = result;
 </script>
-                        <form action='cartInsert.php' method='post'>
+                        <iframe name='formSending' height='0' width='0'></iframe>
+                        <form action='cartInsert.php' method='post' id='registerForm' target='formSending'>
                             <input type='submit' value='Add to cart' id='cart-button'/>
 ";
 

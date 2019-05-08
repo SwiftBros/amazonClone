@@ -73,6 +73,13 @@
             mysqli_close($dbc); //Close the db connection
 	        exit(); //Terminate the execution of the script
         }
+
+        echo "<a href='search.php'>Continue shopping</a>";
+
         mysqli_close($dbc);
     }
 ?>
+
+<script>
+    alert("Added to Cart!");
+</script>
