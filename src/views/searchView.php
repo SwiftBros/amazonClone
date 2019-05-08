@@ -159,8 +159,9 @@
 	var setDate = document.getElementById('prime-date');
 	setDate.innerHTML = result;
 </script>
-
-							<input type='button' value='Add to cart' id='cart-button'/>
+                            <form action='cartInsert.php' method='post'>
+    							<input type='button' value='Add to cart' id='cart-button'/>
+                            </form>
                         </div>
                     </div>
                     <!-- End: Recycle up to this point -->

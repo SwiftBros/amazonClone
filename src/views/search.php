@@ -1,9 +1,41 @@
 
 
+<<<<<<< HEAD
 <?php
 include 'header.php';
 	echo "
         <div class='container-fluid'>
+=======
+<?php include 'header.php'; ?>
+
+<!-- <script>
+    $(document).ready(function() {
+        // $(function() {
+        //     $('form').submit(function() {
+        //         $.ajax({
+        //             type: 'POST',
+        //             url: 'submit.php',
+        //             data: { username: $(this).name.value,
+        //                     password: $(this).password.value }
+        //         });
+        //         return false;
+        //     });
+        // })
+
+        $('#registerForm').submit(function(e) {
+           e.preventDefault();
+           $.ajax({
+                type: 'POST',
+                url: 'cartInsert.php',
+                data: $(this).serialize(),
+                success: window.alert("Added to Cart!");
+           });
+        })
+    });
+</script> -->
+
+        <div class="container-fluid">
+>>>>>>> fce73c03ead127163982c0113d3976b78294c409
             <!-- Results header -->
             <div class='row results-header'>
                 <div class='col-12'>
@@ -217,12 +249,35 @@ console.log(result);
 var setDate = document.getElementById('prime-date');
 setDate.innerHTML = result;
 </script>
-
-						<input type='button' value='Add to cart' id='cart-button'/>
-					</div>
-				</div>
-				<!-- End: Recycle up to this point -->
+                        <iframe name='formSending' height='0' width='0'></iframe>
+                        <form action='cartInsert.php' method='post' id='registerForm' target='formSending'>
+                            <input type='submit' value='Add to cart' id='cart-button'/>
 ";
+
+
+// SQL Query variables to pass to cartInsert.php
+$product_img_url = $row['product_img_url'];
+$name = $row['name'];
+$price_dollars = $row['price_dollars'];
+$price_cents = $row['price_cents'];
+$is_prime = $row['is_prime'];
+
+echo "<input type='hidden' name='product_img_url' value='" .$product_img_url. "'/>";
+echo "<input type='hidden' name='name' value='" .$name. "'/>";
+echo "<input type='hidden' name='price_dollars' value='" .$price_dollars. "'/>";
+echo "<input type='hidden' name='price_cents' value='" .$price_cents. "'/>";
+echo "<input type='hidden' name='is_prime' value='" .$is_prime. "'/>";
+
+echo "
+</form>
+</div>
+</div>
+
+<!-- End: Recycle up to this point -->
+";
+
+
+
 			// 	echo "<tr>
 			// 	<td>".$row['name']."</td>
 			// 	<td>".$row['price_dollars']."</td>

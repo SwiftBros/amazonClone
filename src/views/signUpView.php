@@ -61,7 +61,7 @@
                         <hr />
                         <br />
                         <span>Already have an account?</span>
-                        <a href="login.php" class="hyperlink">Sign in</span>
+                        <a href="login.php" class="hyperlink">Sign in</a>
                     </div>
                 </div>
             </div>
