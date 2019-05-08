@@ -208,6 +208,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                             <!-- TODO: Add JS/jQuery functionality for dates (+2 days from current_date)-->
                             <img src="images/prime.png" class="prime" />
                             <span class="prime-get-by">Get it as soon as <strong>Mon, May 6</strong></span>
+
+							<input type="button" value="Add to cart" id="cart-button"/>
                         </div>
                     </div>
                     <!-- End: Recycle up to this point -->

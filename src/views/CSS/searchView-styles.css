@@ -63,3 +63,7 @@
 .prime-get-by {
     color: #555555;
 }
+
+#cart-button {
+    float: right;
+}
