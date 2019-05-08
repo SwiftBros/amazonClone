@@ -127,8 +127,7 @@ if (isset($errors) && !empty($errors)) {
                   <!-- <button class="dropbtn">Dropdown</button> -->
                   <a class="nav-link" href="#">Hello <?php echo $row['name'];?>, Accounts & Lists</a>
                   <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
+                    <a href="indexView.php">Home</a>
                     <a href="http://localhost:8080/amazonClone/src/views/loggedOutView.php">Sign Out</a>
                   </div>
                 </div>
