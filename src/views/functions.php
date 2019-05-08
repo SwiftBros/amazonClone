@@ -91,7 +91,7 @@ function check_search($dbc, $search = '') {
 	if (empty($errors)) { // If everything's OK.
 
 		// Retrieve the user_id and first_name for that email/password combination:
-		$q = "SELECT product_id, product_img_url, name, review_stars, review_num, price_dollars, price_cents, is_prime, product_condition, tag1, tag2 FROM users WHERE name = " .$s. " OR tag1 = " .$s. "OR tag2 = " .$s;
+		$q = "SELECT product_id, product_img_url, name, review_stars, review_num, price_dollars, price_cents, is_prime, product_condition, tag_1, tag_2 FROM products WHERE name = " .$searchQ. " OR tag_1 = " .$searchQ. " OR tag_2 = " .$searchQ. ";";
 		// $q = "SELECT user_id, name FROM users WHERE email='$e' AND password=SHA1('$p')";
 		$r = mysqli_query($dbc, $q); // Run the query.
 
