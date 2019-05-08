@@ -32,6 +32,22 @@
                     </div>
                 </div>
 
+<?php
+    require('mysqli_connect.php');
+
+    session_start();
+
+    $query = "SELECT cart_product_img_url, product_name, product_price_dollars, product_price_cents, product_is_prime FROM cart WHERE user_id = " .$_SESSION['user_id'];
+
+    $run = mysqli_query($dbc, $query);
+
+    $count = mysqli_num_rows($run);
+
+    if($count > 0) {
+        
+    }
+?>
+
                 <!-- RECYCLE STARTING POINT -->
                 <div class="row cart-table">
                     <div class="col-8"> <!-- column for item details-->

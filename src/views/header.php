@@ -142,7 +142,7 @@ if (isset($errors) && !empty($errors)) {
               <a class="nav-link" href="#">Prime</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Cart</a>
+              <a class="nav-link" href="cartView.php">Cart</a>
             </li>
           </ul>
         </nav>
