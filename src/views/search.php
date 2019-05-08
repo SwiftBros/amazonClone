@@ -1,41 +1,8 @@
 
-
-<<<<<<< HEAD
 <?php
 include 'header.php';
 	echo "
         <div class='container-fluid'>
-=======
-<?php include 'header.php'; ?>
-
-<!-- <script>
-    $(document).ready(function() {
-        // $(function() {
-        //     $('form').submit(function() {
-        //         $.ajax({
-        //             type: 'POST',
-        //             url: 'submit.php',
-        //             data: { username: $(this).name.value,
-        //                     password: $(this).password.value }
-        //         });
-        //         return false;
-        //     });
-        // })
-
-        $('#registerForm').submit(function(e) {
-           e.preventDefault();
-           $.ajax({
-                type: 'POST',
-                url: 'cartInsert.php',
-                data: $(this).serialize(),
-                success: window.alert("Added to Cart!");
-           });
-        })
-    });
-</script> -->
-
-        <div class="container-fluid">
->>>>>>> fce73c03ead127163982c0113d3976b78294c409
             <!-- Results header -->
             <div class='row results-header'>
                 <div class='col-12'>
