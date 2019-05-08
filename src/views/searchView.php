@@ -204,9 +204,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
                             <span class="review-num">248</span><br /><br />
                             <sup class="superscript">$</sup><span class="price">12</span><sup class="superscript">99</sup><br />
 
-                            <!-- Add this if item is prime -->
-                            <!-- TODO: Add JS/jQuery functionality for dates (+2 days from current_date)-->
 <script>
+	// JS Functionality for getting date 2 days from now
+
 	// Instantiate date object, add 2 days from now to date
 	var date = new Date();
 	var numberOfDaysToAdd = 2;
@@ -295,8 +295,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 	console.log(formattedDate);
 
 </script>
-
+							<!-- Add this img if item is prime -->
                             <img src="images/prime.png" class="prime" />
+
                             <span class="prime-get-by">Get it as soon as <strong id="prime-date">Mon, May 6</strong></span>
 
 <script>
