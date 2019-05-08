@@ -12,12 +12,10 @@
         $query = "DELETE FROM cart WHERE user_id = $id";
         $run = mysqli_query($dbc, $query);
 
-        $rows = mysqli_fetch_array($run, MYSQLI_ASSOC);
-
-        if (isset($row['description'])) { // if empty table
-			echo "<p>Delete success!</p>";
+        if (mysqli_affected_rows($dbc) > 0) { // if empty table
+			echo "<p>Table was updated!</p>";
 		} else {
-			echo "<p>Unable to delete.</p>";
+			echo "<p>Table was not updated. May be you had no items in cart</p>";
 			echo "<p>".mysqli_error($dbc)."</p>";
 		}
     }
