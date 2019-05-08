@@ -21,7 +21,7 @@ input[type="text"] {
     padding-right: 50px;
 }
 
-div#submitForm input {
+/* #submitForm input {
   background-image: url("searchLogo.png") no-repeat scroll 0 0 transparent;
   color: #000000;
   cursor: pointer;
@@ -29,15 +29,15 @@ div#submitForm input {
   height: 30px;
   width: 50px;
   margin-left: -160px;
-}
+} */
 
 #footer {
     background-color:#222F3D;
     color: white;
 }
 
-.button {
-    margin-left: -140px;
+#searchButton {
+    margin-left: -36px;
     background-color: orange;
     height: 29px;
 }

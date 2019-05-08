@@ -24,6 +24,34 @@ function redirect_user ($page = 'index.php') {
 
 } // End of redirect_user() function.
 
+function numStars ($s) {
+	switch ($s) {
+    case 1:
+        return "images/1-star.png";
+        break;
+    case 2:
+        return "images/2-stars.png";
+        break;
+    case 3:
+        return "images/3-stars.png";
+        break;
+	case 4:
+		return "images/4-stars.png";
+		break;
+	case 5:
+	    return "images/5-stars.png";
+	    break;
+    default:
+        return "images/5-stars.png";
+	}
+}
+
+function isPrime ($p) {
+	if ($p == 1) {
+		return "<img src='images/prime.png' class='prime' />";
+	}
+}
+
 
 /* This function validates the form data (the email address and password).
  * If both are present, the database is queried.

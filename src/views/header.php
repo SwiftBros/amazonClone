@@ -1,7 +1,11 @@
 <?php # Script 12.4 - loggedin.php
 // The user is redirected here from login.php.
 
+include('mysqli_connect.php');
+
 session_start();
+
+error_reporting(!8);
 // If no cookie is present, redirect the user:
 if (!isset($_SESSION['user_id'])) {
 
@@ -15,7 +19,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $pageTitle = "Welcome";
 
-include('mysqli_connect.php');
+
 
 $query = "SELECT user_id, name, email FROM users WHERE user_id = ".$_SESSION['user_id'];
 
@@ -82,9 +86,9 @@ if (isset($errors) && !empty($errors)) {
                 <li><img id='logo' alt="AmazonLogo" src="images/amaz.png" /></li>
             </ul>
 			<form action="search.php" method="post">
+				<div>
 	            <input type="text" name="search"/>
-	            <div id="submitForm">
-	                <button type="submit" class="icon button"><i class="fa fa-search"></i></button>
+	                <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
 	                <!-- <input type="submit" value="Search" name="submit"> -->
 	            </div>
 			</form>
@@ -102,7 +106,7 @@ if (isset($errors) && !empty($errors)) {
         <nav id="navbar3" class="navbar navbar-expand-sm">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Deliver to Dewan</a>
+              <a class="nav-link" href="#">Deliver to <?php echo $row['name']; ?></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Browsing History</a>

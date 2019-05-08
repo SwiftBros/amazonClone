@@ -1,20 +1,21 @@
 
 
-<?php include 'header.php'; ?>
-
-        <div class="container-fluid">
+<?php
+include 'header.php';
+	echo "
+        <div class='container-fluid'>
             <!-- Results header -->
-            <div class="row results-header">
-                <div class="col-12">
-                    <span style="float: left;">1-16 over 100,000 results for
-                        <span id="item-results">"headphones"</span>
+            <div class='row results-header'>
+                <div class='col-12'>
+                    <span style='float: left;'>1-16 over 100,000 results for
+                        <span id='item-results'>'".$searchQ."'</span>
                     </span>
-                    <span style="float: right;">
-                        <form action="">
-                            <select name="sort">
-                                <option value="price_low">Sort by: Price Low to High</option>
-                                <option value="price_high">Sort by: Price High to Low</option>
-                                <option value="customer_review">Sort by: Avg. Customer Review</option>
+                    <span style='float: right;'>
+                        <form action=''>
+                            <select name='sort'>
+                                <option value='price_low'>Sort by: Price Low to High</option>
+                                <option value='price_high'>Sort by: Price High to Low</option>
+                                <option value='customer_review'>Sort by: Avg. Customer Review</option>
                             </select>
                         </form>
                     </span>
@@ -22,30 +23,30 @@
             </div>
 
             <!-- Search items: Left sidebar + Item records -->
-            <div class="row search-items">
-                <div class="col-3 left-sidebar">
-                    <span class="sidebar-category">Amazon Prime</span><br />
-                    <input type="checkbox" name="prime" value="false"><img src="images/prime.png" class="prime" style="width:20%"/>
+            <div class='row search-items'>
+                <div class'col-3 left-sidebar'>
+                    <span class='sidebar-category'>Amazon Prime</span><br />
+                    <input type='checkbox' name='prime' value='false'><img src='images/prime.png' class='prime' style='width:20%'/>
                     <br /><br />
 
-                    <span class="sidebar-category">Delivery Day</span><br />
-                    <input type="checkbox" name="delivery" value="false"> Get It by Tomorrow<br /><br />
+                    <span class='sidebar-category'>Delivery Day</span><br />
+                    <input type='checkbox' name='delivery' value='false'> Get It by Tomorrow<br /><br />
 
-                    <span class="sidebar-category">Avg. Customer Review</span><br />
-                    <input type="image" src="images/4-stars.png" /> & Up<br />
-                    <input type="image" src="images/3-stars.png" /> & Up<br />
-                    <input type="image" src="images/2-stars.png" /> & Up<br />
-                    <input type="image" src="images/1-star.png" /> & Up<br />
+                    <span class='sidebar-category'>Avg. Customer Review</span><br />
+                    <input type='image' src='images/4-stars.png' /> & Up<br />
+                    <input type='image' src='images/3-stars.png' /> & Up<br />
+                    <input type='image' src='images/2-stars.png' /> & Up<br />
+                    <input type='image' src='images/1-star.png' /> & Up<br />
                     <br />
 
-                    <span class="sidebar-category">Condition</span><br />
+                    <span class='sidebar-category'>Condition</span><br />
                     <span>New</span><br />
                     <span>Used</span><br />
                 </div>
 
-                <div class="col-9 item-records">
+                <div class='col-9 item-records'>
+				";
 
-<?php
 
 // require_once ('includes/functions.php');
 //
@@ -56,12 +57,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	// SELECT product_id, product_img_url, name, review_stars, review_num, price_dollars, price_cents, is_prime, product_condition, tag_1, tag_2 FROM products WHERE name = 'headphones' OR tag_1 = 'headphones' OR tag_2 = 'headphones'
 	require ('mysqli_connect.php');
-	require_once ('functions.php');
+	// require_once ('functions.php');
 
 	// Need the database connection:
 
+
 	$searchQ = $_POST['search'];
-	echo $searchQ;
+	// echo $searchQ;
 	// Check the login:
 	// list ($check, $data) = check_search($dbc, $searchQ);
 	//
@@ -109,7 +111,7 @@ echo "
 
 					<div class='col-9'>
 						<span class='item-desc'>".$row['name']."1</span><br />
-						<img src='images/4-stars.png' />
+						<img src='".numStars($row['review_stars'])."' />
 						<span class='review-num'>".$row['review_num']."</span><br /><br />
 						<sup class='superscript'>$</sup><span class='price'>".$row['price_dollars']."</span><sup class='superscript'>".$row['price_cents']."</sup><br />
 
@@ -205,7 +207,7 @@ console.log(formattedDate);
 
 </script>
 						<!-- Add this img if item is prime -->
-						<img src='images/prime.png' class='prime' />
+						".isPrime($row['is_prime'])."
 
 						<span class='prime-get-by'>Get it as soon as <strong id='prime-date'></strong></span>
 
@@ -260,13 +262,11 @@ setDate.innerHTML = result;
 
 
 
-?>
 
-
+echo "
 </div>
 </div>
-</div>
-<!-- </body>
-</html> -->
+</div>";
 
-<?php include 'footer.php'; ?>
+
+include 'footer.php'; ?>
