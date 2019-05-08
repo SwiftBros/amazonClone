@@ -23,20 +23,20 @@ $searchQ = $_POST['search'];
             </div>
 
 			<script type="text/javascript">
-			function redirect(page)
-			{
-				if (page == 'price_high')
+				function redirect(page)
 				{
-					window.location = 'search1.php';
+				    if (page == 'price_high')
+				    {
+				        window.location = 'search1.php';
+				    }
+				    else if (page == 'customer_review')
+				    {
+				        window.location = 'search2.php';
+				    } else if (page == 'price_low')
+                    {
+                        window.location = 'search3.php';
+                    }
 				}
-				else if (page == 'customer_review')
-				{
-					window.location = 'search2.php';
-				} else if (page == 'price_low')
-				{
-					window.location = 'search3.php';
-				}
-			}
 		    </script>
 
             <!-- Search items: Left sidebar + Item records -->
@@ -95,7 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	// if ($check) { // OK!
 
 
-		$query2 = "SELECT product_id, product_img_url, name, review_stars, review_num, price_dollars, price_cents, is_prime, product_condition, tag_1, tag_2 FROM products WHERE name = '$searchQ' OR tag_1 = '$searchQ' OR tag_2 = '$searchQ';";
+		$query2 = "SELECT product_id, product_img_url, name, review_stars, review_num, price_dollars, price_cents, is_prime, product_condition, tag_1, tag_2 FROM products WHERE name = '$searchQ' OR tag_1 = '$searchQ' OR tag_2 = '$searchQ' ORDER BY price_dollars DESC;";
 
 		// $query2 = "SELECT product_id, product_img_url, name, review_stars, review_num, price_dollars, price_cents, is_prime, product_condition, tag_1, tag_2 FROM products WHERE name = 'headphones' OR tag_1 = 'headphones' OR tag_2 = 'headphones';";
 
