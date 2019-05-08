@@ -2,12 +2,66 @@
 <?php
 include 'header.php';
 $searchQ = $_POST['search'];
+
+
+
+// require_once ('includes/functions.php');
+//
+// 	// Need the database connection:
+// require ('includes/mysqli_connect.php');
+
+if ($_REQUEST['sort'] == 'price_high'){
+	redirect_user('login.php');
+}elseif($_REQUEST['sort'] == 'customer_review'){
+	redirect_user('login.php');
+}
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+	// SELECT product_id, product_img_url, name, review_stars, review_num, price_dollars, price_cents, is_prime, product_condition, tag_1, tag_2 FROM products WHERE name = 'headphones' OR tag_1 = 'headphones' OR tag_2 = 'headphones'
+	require ('mysqli_connect.php');
+	// require_once ('functions.php');
+
+	// Need the database connection:
+
+
+	$searchQ = $_POST['search'];
+	// echo $searchQ;
+	// Check the login:
+	// list ($check, $data) = check_search($dbc, $searchQ);
+	//
+	// if ($check) { // OK!
+
+
+		$query2 = "SELECT product_id, product_img_url, name, review_stars, review_num, price_dollars, price_cents, is_prime, product_condition, tag_1, tag_2 FROM products WHERE name = '$searchQ' OR tag_1 = '$searchQ' OR tag_2 = '$searchQ';";
+
+		// $query2 = "SELECT product_id, product_img_url, name, review_stars, review_num, price_dollars, price_cents, is_prime, product_condition, tag_1, tag_2 FROM products WHERE name = 'headphones' OR tag_1 = 'headphones' OR tag_2 = 'headphones';";
+
+		$run = mysqli_query($dbc, $query2); //Run the query and store the results in a variable
+
+		// if (mysqli_num_rows($run) >= 1) {
+		//
+		// 	// Fetch the record:
+		// 	$row = mysqli_fetch_array ($r, MYSQLI_ASSOC);
+		//
+		// 	// Return true and the record:
+		// 	return array(true, $row);
+		//
+		// } else { // Not a match!
+		// 	$errors[] = 'The email address and password entered do not match those on file.';
+		// }
+
+
+		$count = mysqli_num_rows($run); //Count the number of rows returned by the query
+
+		//If the number of rows returned in greater than 0, display the results of the query
+
 ?>
         <div class='container-fluid'>
             <!-- Results header -->
             <div class='row results-header'>
                 <div class='col-12'>
-                    <span style='float: left;'>1-16 over 100,000 results for
+                    <span style='float: left;'><?php echo $count; ?> results for
                         <span id='item-results'><?php echo $searchQ; ?></span>
                     </span>
                     <span style='float: right;'>
@@ -65,58 +119,6 @@ $searchQ = $_POST['search'];
 
 
 <?php
-
-
-// require_once ('includes/functions.php');
-//
-// 	// Need the database connection:
-// require ('includes/mysqli_connect.php');
-
-if ($_REQUEST['sort'] == 'price_high'){
-	redirect_user('login.php');
-}elseif($_REQUEST['sort'] == 'customer_review'){
-	redirect_user('login.php');
-}
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-	// SELECT product_id, product_img_url, name, review_stars, review_num, price_dollars, price_cents, is_prime, product_condition, tag_1, tag_2 FROM products WHERE name = 'headphones' OR tag_1 = 'headphones' OR tag_2 = 'headphones'
-	require ('mysqli_connect.php');
-	// require_once ('functions.php');
-
-	// Need the database connection:
-
-
-	$searchQ = $_POST['search'];
-	// echo $searchQ;
-	// Check the login:
-	// list ($check, $data) = check_search($dbc, $searchQ);
-	//
-	// if ($check) { // OK!
-
-
-		$query2 = "SELECT product_id, product_img_url, name, review_stars, review_num, price_dollars, price_cents, is_prime, product_condition, tag_1, tag_2 FROM products WHERE name = '$searchQ' OR tag_1 = '$searchQ' OR tag_2 = '$searchQ';";
-
-		// $query2 = "SELECT product_id, product_img_url, name, review_stars, review_num, price_dollars, price_cents, is_prime, product_condition, tag_1, tag_2 FROM products WHERE name = 'headphones' OR tag_1 = 'headphones' OR tag_2 = 'headphones';";
-
-		$run = mysqli_query($dbc, $query2); //Run the query and store the results in a variable
-
-		// if (mysqli_num_rows($run) >= 1) {
-		//
-		// 	// Fetch the record:
-		// 	$row = mysqli_fetch_array ($r, MYSQLI_ASSOC);
-		//
-		// 	// Return true and the record:
-		// 	return array(true, $row);
-		//
-		// } else { // Not a match!
-		// 	$errors[] = 'The email address and password entered do not match those on file.';
-		// }
-
-
-		$count = mysqli_num_rows($run); //Count the number of rows returned by the query
-
-		//If the number of rows returned in greater than 0, display the results of the query
 
 		if($count > 0){
 			//Print the number of users that exist
@@ -282,7 +284,7 @@ echo "
 
 			// include('searchView.php');
 		}else{ //If no records are returned by the query, print a message to the user
-			echo "<p>There are currently no registered users</p>";
+			echo "<p>There are currently no products with that name.</p>";
 		}
 
 	// } else { // Unsuccessful!
