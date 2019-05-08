@@ -1,6 +1,6 @@
-<?php require ('mysqli_connect.php'); ?>
 
-<?php include 'header2.php'; ?>
+
+<?php include 'header.php'; ?>
 
         <div class="container-fluid">
             <!-- Results header -->
@@ -55,6 +55,7 @@
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	// SELECT product_id, product_img_url, name, review_stars, review_num, price_dollars, price_cents, is_prime, product_condition, tag_1, tag_2 FROM products WHERE name = 'headphones' OR tag_1 = 'headphones' OR tag_2 = 'headphones'
+	require ('mysqli_connect.php');
 	require_once ('functions.php');
 
 	// Need the database connection:
