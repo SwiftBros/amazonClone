@@ -55,6 +55,12 @@ $searchQ = $_POST['search'];
 // 	// Need the database connection:
 // require ('includes/mysqli_connect.php');
 
+if ($_REQUEST['sort'] == 'price_high'){
+	redirect('http://google.com');
+}elseif($_REQUEST['sort'] == 'customer_review'){
+	redirect('http://yahoo.com');
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 	// SELECT product_id, product_img_url, name, review_stars, review_num, price_dollars, price_cents, is_prime, product_condition, tag_1, tag_2 FROM products WHERE name = 'headphones' OR tag_1 = 'headphones' OR tag_2 = 'headphones'

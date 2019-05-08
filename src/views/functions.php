@@ -6,7 +6,7 @@ function title($str){
 	echo $str;
 }
 
-function redirect_user ($page = 'index.php') {
+function redirect_user ($page = 'indexView.php') {
 
 	// Start defining the URL...
 	// URL is http:// plus the host name plus the current directory:
@@ -23,6 +23,32 @@ function redirect_user ($page = 'index.php') {
 	exit(); // Quit the script.
 
 } // End of redirect_user() function.
+
+function redirect($where){
+	// Start defining the URL...
+	// URL is http:// plus the host name plus the current directory:
+	// $url = 'http://' . $_SERVER['HTTP_HOST'] . dirname($_SERVER['PHP_SELF']);
+
+	// Remove any trailing slashes:
+	$url = rtrim($url, '/\\');
+
+	// Add the page:
+	// $url .= '/' . $page;
+
+	// Redirect the user:
+	header("Location: $url");
+	exit(); // Quit the script.
+    // header("Location: $where");
+}
+
+function sortBy() {
+    if ($_REQUEST['select1'] == 'p1'){
+        redirect('http://google.com');
+    }elseif($_REQUEST['select1'] == 'p2'){
+        redirect('http://example.com/elsewhere.php');
+    }
+}
+
 
 function numStars ($s) {
 	switch ($s) {
