@@ -38,6 +38,10 @@
     font-weight: bold;
 }
 
+#subtotal-label-price {
+    color: #B12E25;
+}
+
 .quantity-form {
     margin-top: 10px;
 }
