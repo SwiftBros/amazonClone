@@ -59,3 +59,22 @@
 .item-row {
     margin: 10px 10px 10px 10px;
 }
+
+.hyperlink {
+    font-size: 12px;
+    color: #0645AD;
+}
+
+.item-row input[type=submit] {
+    /* background: white; */
+    border: 1px solid white;
+    font-size: 12px;
+    color: #0645AD;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.item-row input[type=submit]:hover {
+    color: #E47931;
+    text-decoration: underline;
+}
