@@ -43,8 +43,10 @@
 
     $count = mysqli_num_rows($run);
 
+    $numOfItems = 0;
     if($count > 0) {
         while ($row = mysqli_fetch_array($run, MYSQLI_ASSOC)) {
+            $numOfItems += 1;
             echo "
             <!-- RECYCLE STARTING POINT -->
             <div class='row cart-table'>
@@ -100,7 +102,14 @@
             <div class="col-3">
                 <div class="checkout-card">
                     <!-- TODO: Dynamically set price -->
-                    <div id="subtotal-label">Subtotal (x items): <span id="subtotal-label-price"></span></div>
+                    <div id="subtotal-label">Subtotal (<?php
+                            echo "$numOfItems";
+                            if ($numOfItems == 1) {
+                                echo " item";
+                            } else {
+                                echo " items";
+                            }
+                        ?>): <span id="subtotal-label-price"></span></div>
                     <input type="checkbox" /><span id="checkbox-gift">&nbsp;&nbsp;This order contains a gift</span>
                     <br /><br />
 

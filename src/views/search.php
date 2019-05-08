@@ -234,7 +234,7 @@ console.log(formattedDate);
 						<!-- Add this img if item is prime -->
 						".isPrime($row['is_prime'])."
 
-						<span class='prime-get-by'>Get it as soon as <strong id='prime-date'></strong></span>
+						<span class='prime-get-by'>Get it as soon as <strong id='prime-date'>Fri, May 10</strong></span>
 
 <script>
 var result = primeDayString + ', ' + primeMonthString + ' ' + dd;
