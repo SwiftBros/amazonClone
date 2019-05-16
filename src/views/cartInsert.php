@@ -50,6 +50,7 @@
         $c_is_prime = mysqli_real_escape_string($dbc, $cart_is_prime);
         $c_user_id = mysqli_real_escape_string($dbc, $user_for_cart);
 
+
         $query = "INSERT INTO cart VALUES (
             'NULL',
             '$c_img_url',

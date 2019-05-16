@@ -21,6 +21,41 @@
 
 <?php include 'header.php'; ?>
 
+<?php
+
+;
+
+require('mysqli_connect.php');
+
+session_start();
+
+$query3 = "SELECT donations FROM users WHERE user_id = ".$_SESSION['user_id'];
+
+$run = mysqli_query($dbc, $query3);
+
+// $count = mysqli_num_rows($run);
+
+if (mysqli_num_rows($run) == 1){
+	$row = mysqli_fetch_array($run, MYSQLI_ASSOC);
+    echo $row;
+	// Print a customized message:
+}else{
+	echo "Error!asdfasdf";
+}
+
+mysqli_close($dbc);
+// if (mysqli_num_rows($run) == 1){
+// 	$row = mysqli_fetch_array($run, MYSQLI_ASSOC);
+// 	// Print a customized message:
+// }else{
+// 	echo "Error!";
+// }
+
+mysqli_close($dbc);
+
+// $count = mysqli_num_rows($run);
+
+?>
  <!-- Carousel slider -->
         <div class="carousel-slideshow">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -68,7 +103,7 @@
                         <div class="col-8 pl-0">
                             <span class="card-title">Hi, <?php echo $row['name'];?></span>
                             <div class="card-text"><span style="color:#C35629">AmazonSmile</span> <span>donations</span></div>
-                            <div class="card-text">generated: $0.00</div>
+                            <div class="card-text">generated: $<?php echo $row['donations']; ?></div>
                         </div>
                     </div>
 

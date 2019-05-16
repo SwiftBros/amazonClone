@@ -37,6 +37,8 @@
 
     session_start();
 
+    $user_for_cart = $_SESSION['user_id'];
+
     $query = "SELECT cart_product_img_url, product_name, product_price_dollars, product_price_cents, product_is_prime FROM cart WHERE user_id = " .$_SESSION['user_id'];
 
     $run = mysqli_query($dbc, $query);
@@ -44,8 +46,17 @@
     $count = mysqli_num_rows($run);
 
     $numOfItems = 0;
+    $totalAmt = 0;
     if($count > 0) {
         while ($row = mysqli_fetch_array($run, MYSQLI_ASSOC)) {
+            // $totalDonationAmt += $row['product_price_dollars'] += ($row['product_price_cents']/100);
+            // $dollars =
+            $dollars = (int)$row['product_price_dollars'];
+            $cents = (int)$row['product_price_cents']/100;
+
+            $totalAmt += $dollars;
+            $totalAmt += $cents;
+
             $numOfItems += 1;
             echo "
             <!-- RECYCLE STARTING POINT -->
@@ -95,7 +106,31 @@
             ";
         }
     }
+    $donationAmount = round($totalAmt * .005, 2);
+
+    // $d = mysqli_real_escape_string($dbc, $donationAmount);
+
+
+    $query2 = "UPDATE users
+    SET donations = donations + $donationAmount
+    WHERE user_id = '$user_for_cart';";
+
+    $run = mysqli_query($dbc, $query2);
+
+    if ($run) {
+        // echo "<p>Donation Updated Successfully!</p>";
+    } else {
+        echo "<p>Error. Couldn't add to cart!</p>";
+        echo "<br />";
+        //Print a debugging message
+        echo "<p>".mysqli_error($dbc)."</p>";
+        mysqli_close($dbc); //Close the db connection
+        exit(); //Terminate the execution of the script
+    }
+    mysqli_close($dbc); //Close the db connection
+
 ?>
+
 
             </div>
 
