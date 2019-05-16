@@ -29,7 +29,7 @@ require('mysqli_connect.php');
 
 session_start();
 
-$query3 = "SELECT donations FROM users WHERE user_id = ".$_SESSION['user_id'];
+$query3 = "SELECT name, donations FROM users WHERE user_id = ".$_SESSION['user_id'];
 
 $run = mysqli_query($dbc, $query3);
 
@@ -101,7 +101,7 @@ mysqli_close($dbc);
                             <img src="images/profile.png" alt="profile_pic" class="img-fluid profile" />
                         </div>
                         <div class="col-8 pl-0">
-                            <span class="card-title">Hi, <?php echo $row['name'];?></span>
+                            <span class="card-title">Hi <?php echo $row['name'];?>,</span>
                             <div class="card-text"><span style="color:#C35629">AmazonSmile</span> <span>donations</span></div>
                             <div class="card-text">generated: $<?php echo $row['donations']; ?></div>
                         </div>
