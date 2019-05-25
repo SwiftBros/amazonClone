@@ -39,7 +39,7 @@ Full-stack web app that mimics Amazon's website.
 - [x] Shopping Cart
 - [ ] Transactions
 
-# MySQL Features Implemented
+## MySQL Features Implemented
 - [x] Create (INSERT INTO VALUES)
 - [x] Read (SELECT FROM WHERE)
 - [ ] Update
