@@ -37,10 +37,10 @@ $run = mysqli_query($dbc, $query3);
 
 if (mysqli_num_rows($run) == 1){
 	$row = mysqli_fetch_array($run, MYSQLI_ASSOC);
-    echo $row;
+    // echo $row;
 	// Print a customized message:
 }else{
-	echo "Error!asdfasdf";
+	echo "Error!";
 }
 
 mysqli_close($dbc);
