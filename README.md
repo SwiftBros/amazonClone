@@ -2,7 +2,11 @@
 
 Created by Matt and Rageeb
 
-Full-stack web that mimics Amazon's website.
+Full-stack web app that mimics Amazon's website.
+
+**Built with:**
+- Frontend: HTML, CSS, Bootstrap, JavaScript, jQuery
+- Backend: PHP, MySQL
 
 ## Features
 - [x] User can **login**
@@ -17,6 +21,7 @@ Full-stack web that mimics Amazon's website.
     - Review/Rating
     - Prime/Not Prime
     - Condition
+- [ ] User can update shopping cart item quantities
 
 ## Pages
 
@@ -29,16 +34,16 @@ Full-stack web that mimics Amazon's website.
 - [x] Checkout Page
 
 ## MySQL Database Tables
--[x] Users
--[x] Products
--[x] Shopping Cart
--[ ] Transactions
+- [x] Users
+- [x] Products
+- [x] Shopping Cart
+- [ ] Transactions
 
 # MySQL Features Implemented
--[x] Create (INSERT INTO VALUES)
--[x] Read (SELECT FROM WHERE)
--[ ] Update
--[x] Delete (DELETE FROM WHERE)
+- [x] Create (INSERT INTO VALUES)
+- [x] Read (SELECT FROM WHERE)
+- [ ] Update
+- [x] Delete (DELETE FROM WHERE)
 
 
 ## GIF Recording Demo
