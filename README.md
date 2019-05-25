@@ -5,40 +5,40 @@ Created by Matt and Rageeb
 Full-stack web that mimics Amazon's website.
 
 ## Features
-- [ ] User can **login**
-- [ ] User can **choose a charity** to donate to
-- [ ] User can **search** for products
+- [x] User can **login**
+- [x] User can **search** for products
+- [x] User can **sort** items by price/reviews
+    - Price: Low to High
+    - Price: High to Low
+    - Avg customer review (High to Low)
+- [x] User can **add products** to shopping cart
+- [x] User can **checkout** items from shopping cart
 - [ ] User can **filter** products by categories
     - Review/Rating
     - Prime/Not Prime
     - Condition
-- [ ] User can **sort** items by price/reviews
-    - Price: Low to High
-    - Price: High to Low
-    - Avg customer review (High to Low)
-- [ ] User can **add products** to database dynamically
-- [ ] User can **confirm a purchase** using PayPal/Credit Cards
 
 ## Pages
 
 - [x] Login Page
 - [x] Signup Page
 - [x] Home Page
-    - [ ] Charity Page hover-over (Header)
-- [ ] Charity Page
 - [x] Search Page
-    - 3 searches
-    - 15 products per search
-    - 3 * 15 = 45 images
-- [ ] Product Detail Page
-- [ ] Cart Page
-- [ ] Checkout Page
+- [x] Product Detail Page
+- [x] Cart Page
+- [x] Checkout Page
 
-## Database Tables
-- Users (Form)
-- Products (Hardcoded + Dynamic through forms)
-- Charities (HARDCODED ON SQL BACKEND)
-- Transaction (Adding into Transaction Table/ Displaying that information)
+## MySQL Database Tables
+-[x] Users
+-[x] Products
+-[x] Shopping Cart
+-[ ] Transactions
+
+# MySQL Features Implemented
+-[x] Create (INSERT INTO VALUES)
+-[x] Read (SELECT FROM WHERE)
+-[ ] Update
+-[x] Delete (DELETE FROM WHERE)
 
 
 ## GIF Recording Demo
