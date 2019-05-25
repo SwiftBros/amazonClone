@@ -47,7 +47,7 @@ Full-stack web app that mimics Amazon's website.
 
 
 ## GIF Recording Demo
-http://g.recordit.co/lHGP1RRErH.gif
+<img src="http://g.recordit.co/lHGP1RRErH.gif" width=250><br>
 
 ## License
 © 2019 Matt and Rageeb
