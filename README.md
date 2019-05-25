@@ -47,7 +47,7 @@ Full-stack web app that mimics Amazon's website.
 
 
 ## GIF Recording Demo
-*IMGUR Placeholder*
+http://g.recordit.co/lHGP1RRErH.gif
 
 ## License
 © 2019 Matt and Rageeb
